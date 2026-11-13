@@ -173,6 +173,8 @@ def check_static(root, truth):
             err.append(f'사이트 파일 아님: {f}')
     texts = {f: open(os.path.join(root, f), encoding='utf-8', errors='replace').read()
              for f in files if f != SELF and not f.endswith('.png')}
+    if 'app-ads.txt' in texts and not re.fullmatch(r'google\.com, pub-\d+, DIRECT, f08c47fec0942fa0\n', texts['app-ads.txt']):
+        err.append('app-ads.txt: "google.com, pub-<게시자 ID>, DIRECT, f08c47fec0942fa0" 한 줄이어야 한다')
     for f, s in texts.items():
         for b in BANNED_TEXT:
             if b in s:
@@ -354,6 +356,7 @@ FIXTURES = [  # (파일, 바꿀 글, 새 글, 나와야 할 오류 낱말)
     ('tongcap/ja/index.html', '3f7330fb191881dc8f13ce1ecac616c2', '3f7330fb191881098a30db9620d9de74', '처리방침 링크'),
     ('tongcap/es/index.html', 'href="../ja/" lang="ja"', 'href="../zh-Hans/" lang="ja"', '언어 링크 ja'),
     ('tongcap/zh-Hant/index.html', '<p class="sub">網頁與聊天記錄完整存成一張長圖</p>', '<p class="sub">網頁與聊天記錄完整存成一張圖</p>', '부제(.sub)'),
+    ('app-ads.txt', 'DIRECT', 'RESELLER', 'app-ads.txt'),
     ('docs/메모.md', None, '# 내부 메모', '사이트 파일 아님'),
 ]
 

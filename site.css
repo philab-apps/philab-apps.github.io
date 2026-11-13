@@ -1,0 +1,136 @@
+/* 필랩 개발자 사이트 — 공용 스타일
+   값은 Tongcap 앱 토큰(Ink·Radius·Space·Elevation)에서 옮겼다. 이름 옆 주석이 앱 토큰.
+   외부 글꼴·스크립트 없음 — 시스템 글꼴만. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #F3F2F2;          /* Ink.base */
+  --surface: #FFFFFF;     /* Ink.surface */
+  --ink: #201E1D;         /* Ink.onDark */
+  --ink-2: #605D5D;       /* Ink.secondary — 5.83 (bg) / 6.52 (surface) */
+  --ink-3: #6E6B6B;       /* Ink.caption   — 4.72 / 5.28 */
+  --rule: #D7D3D3;        /* Ink.ruleFaint */
+  --accent: #DD2B0F;      /* Ink.accent — 면·굵은 큰 표식만, 작은 글자에 쓰지 않는다 */
+  --accent-ink: #AE1800;  /* Ink.accentOnDark(라이트) — 링크·초점 6.41 / 7.17 */
+  --tint: #F1E2E0;        /* Ink.noteTint — 이름표 면, 위 글자 accent-ink 5.70 */
+  --shadow: 0 1px 3px rgba(0, 0, 0, .08); /* Elevation.tile — 라이트만 */
+  --r-card: 16px;         /* Radius.card */
+  --r-tile: 20px;         /* Radius.tile */
+  --r-icon: 22.37%;       /* iOS 아이콘 모서리 근사 — PNG 는 네모라 웹이 깎는다 */
+  --gutter: 20px;         /* Space.screen */
+  --measure: 40rem;       /* 글 폭 640 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #201E1D;
+    --surface: #2D2B2B;
+    --ink: #F3F2F2;
+    --ink-2: #BAB6B6;     /* 8.27 / 7.01 */
+    --ink-3: #9B9797;     /* 5.75 / 4.87 */
+    --rule: #444141;
+    --accent-ink: #FF9783;/* 7.91 / 6.71 */
+    --tint: #3A201B;      /* 위 글자 7.14 */
+    --shadow: none;       /* 다크는 그림자 없이 면 대비(1.18)로 */
+  }
+}
+
+/* 글꼴 — 시스템만. 언어별로 한자 꼴이 맞는 글꼴을 앞에 */
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 1rem/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: anywhere;
+}
+:lang(ko) { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif; word-break: keep-all; }
+:lang(ja) { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Noto Sans JP", system-ui, sans-serif; line-break: strict; }
+:lang(zh-Hans) { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif; }
+:lang(zh-Hant) { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif; }
+
+*, *::before, *::after { box-sizing: border-box; }
+a { color: var(--accent-ink); text-underline-offset: .18em; }
+:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; border-radius: 6px; }
+
+.wrap { max-width: calc(var(--measure) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* 머리 — 왼쪽 상호, 오른쪽 언어 */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+.mark { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); text-decoration: none; font-weight: 800; font-size: 1.0625rem; letter-spacing: -.01em; }
+.lang-link { display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; color: var(--ink-2); text-decoration: none; font-size: .9375rem; font-weight: 600; }
+.lang-link:hover { color: var(--ink); }
+
+/* 언어 고르기 — <details> (스크립트 없음) */
+.lang { position: relative; }
+.lang summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  min-height: 44px; padding: 0 14px; border-radius: 999px;
+  background: var(--surface); box-shadow: var(--shadow);
+  color: var(--ink); font-size: .9375rem; font-weight: 600;
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: ""; width: 7px; height: 7px; border: solid var(--ink-3); border-width: 0 1.5px 1.5px 0; transform: translateY(-2px) rotate(45deg); }
+.lang[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.lang ul {
+  position: absolute; right: 0; top: calc(100% + 6px); z-index: 2; margin: 0; padding: 6px 0;
+  list-style: none; min-width: 11em; max-width: calc(100vw - 2 * var(--gutter));
+  background: var(--surface); border-radius: var(--r-card);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .14), 0 0 0 1px var(--rule);
+}
+.lang li a { display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 0 16px; color: var(--ink); text-decoration: none; }
+.lang li a[aria-current="page"] { font-weight: 700; }
+.lang li a[aria-current="page"]::after { content: "✓"; color: var(--accent-ink); font-weight: 700; }
+.lang li a:hover { background: color-mix(in srgb, var(--ink) 6%, transparent); }
+
+/* 홈 머리글 */
+.hero { padding: 40px 0 8px; }
+.hero h1 { margin: 0; text-wrap: balance; font-size: clamp(2rem, 1.6rem + 1.8vw, 2.5rem); line-height: 1.1; font-weight: 800; letter-spacing: -.03em; }
+.lede { margin: 12px 0 0; color: var(--ink-2); font-size: 1.0625rem; line-height: 1.5; }
+
+/* 절 */
+.block { padding-top: 32px; }
+.label { margin: 0 0 12px; font-size: 1.0625rem; font-weight: 700; letter-spacing: -.01em; }
+
+/* 앱 카드 — 카드 전체가 링크 */
+.app-card {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px;
+  padding: 16px; border-radius: var(--r-tile);
+  background: var(--surface); box-shadow: var(--shadow);
+  color: var(--ink); text-decoration: none;
+}
+.app-card:focus-visible { border-radius: var(--r-tile); }
+.app-card img { width: 64px; height: 64px; border-radius: var(--r-icon); display: block; }
+.app-name { display: block; font-size: 1.0625rem; font-weight: 700; line-height: 1.35; }
+.app-sub { display: block; margin-top: 2px; color: var(--ink-2); font-size: .9375rem; line-height: 1.45; }
+.chev { width: 8px; height: 8px; border: solid var(--ink-3); border-width: 1.5px 1.5px 0 0; transform: rotate(45deg); margin-right: 4px; }
+
+/* 앱 페이지 머리 — App Store 제품 페이지 꼴: 아이콘 · 이름 · 부제 · 배지 */
+.product { display: grid; gap: 20px; padding: 32px 0 8px; }
+.product .icon { width: 96px; height: 96px; border-radius: var(--r-icon); display: block; box-shadow: var(--shadow), 0 0 0 .5px rgba(0, 0, 0, .06); }
+.product h1 { margin: 0; text-wrap: balance; font-size: clamp(1.75rem, 1.45rem + 1.4vw, 2.25rem); line-height: 1.15; font-weight: 800; letter-spacing: -.03em; }
+.product .sub { margin: 10px 0 0; color: var(--ink-2); font-size: 1.0625rem; line-height: 1.5; }
+.badge { display: inline-flex; align-items: center; min-height: 44px; margin-top: 20px; border-radius: 8px; font-weight: 600; } /* 배지가 들어오면 둘레 빈칸 ≥ 높이의 1/4 (12px) */
+.badge img { display: block; height: 3rem; width: auto; } /* 48px — Apple 최소 40px */
+
+@media (min-width: 600px) {
+  .product { grid-template-columns: auto 1fr; align-items: start; gap: 28px; padding-top: 56px; }
+  .product .icon { width: 128px; height: 128px; }
+}
+
+/* 묶음 목록 — 앱 설정 화면의 카드 묶음(D안) */
+.group { margin: 0; padding: 0; list-style: none; background: var(--surface); border-radius: var(--r-card); box-shadow: var(--shadow); overflow: hidden; }
+.group li { position: relative; }
+.group li + li::before { content: ""; position: absolute; left: 16px; right: 0; top: 0; border-top: 1px solid var(--rule); } /* 왼쪽 16 들여 괘선 */
+.group a { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px; min-height: 52px; padding: 12px 16px; color: var(--ink); text-decoration: none; }
+.group a:hover { background: color-mix(in srgb, var(--ink) 4%, transparent); }
+.group a:focus-visible { outline-offset: -3px; border-radius: var(--r-card); }
+.group .val { margin-left: auto; color: var(--ink-3); font-size: .9375rem; } /* 좁으면 아래 줄로 */
+.ext { color: var(--ink-3); flex: none; } /* ↗ 다른 사이트로 나감 */
+
+/* 바닥 */
+.foot { padding-top: 48px; padding-bottom: 40px; color: var(--ink-3); font-size: .875rem; }
+.foot p { margin: 0; }
+.foot p + p { margin-top: 8px; line-height: 1.5; } /* Apple 상표 표기 */
+.foot a { color: inherit; }

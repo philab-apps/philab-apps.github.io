@@ -1,75 +1,48 @@
-# philab-apps.github.io
+# Philab
 
-필랩(Philab) 개발자 사이트. GitHub Pages 로 내보내는 정적 HTML 이다 — 빌드 도구·스크립트·외부 글꼴·분석·쿠키 없음.
+일상의 작은 불편을 덜어 주는 iPhone 앱을 소개하는 개발자 사이트.
+GitHub Pages에서 제공하는 정적 HTML과 CSS이며 빌드 단계가 없습니다.
 
+## 구성
+
+- `/`: 한국어 홈. 스튜디오 소개, 통캡 소개, 개발 방향, 문의.
+- `/en/`: 영어 홈.
+- `/tongcap/`: 통캡 영어 상세 페이지.
+- `/tongcap/ko/`, `/tongcap/ja/`, `/tongcap/es/`, `/tongcap/zh-Hans/`, `/tongcap/zh-Hant/`: 언어별 상세 페이지.
+- `site.css`: 공통 디자인, 모바일 배치, 시스템 다크 모드, 키보드 포커스와 동작 줄이기 대응.
+- `tongcap/icon.png`: 기존 앱 아이콘.
+- `app-ads.txt`: 기존 AdMob 등록 정보.
+- `.nojekyll`: 정적 파일을 그대로 게시하도록 지정.
+
+통캡 페이지에는 기능, 웹 캡처 사용법, 무료/Pro 구분, 무료 체험 안내, FAQ, 기존 지원·개인정보 처리방침 링크가 있습니다. 화면 그림은 CSS로 만든 기능 설명용 일러스트이며 실제 앱 스크린샷이 아닙니다. 언어 선택과 FAQ는 HTML `details` 요소로 동작합니다. 자바스크립트, 외부 글꼴, 분석 도구, 쿠키를 사용하지 않습니다.
+
+## 로컬 미리보기
+
+```bash
+python3 -m http.server 4173 --bind 127.0.0.1
 ```
-index.html            홈(한국어)  /
-en/index.html         홈(영어)    /en/
-site.css              공용 스타일(앱 색 토큰 · 라이트/다크)
-tongcap/index.html    Tongcap(영어 — 첫 페이지)  /tongcap/
-tongcap/<언어>/       ko · es · ja · zh-Hans · zh-Hant
-tongcap/icon.png      앱 아이콘 256px
-scripts/check.py      검사
-.nojekyll             Jekyll 을 거치지 않고 파일 그대로 내보낸다
-```
+
+브라우저에서 `http://127.0.0.1:4173/`를 엽니다. 별도 패키지 설치는 필요 없습니다.
 
 ## 검사
 
 ```bash
-python3 scripts/check.py <Tongcap 저장소 경로>            # 커밋 전에(1초 안)
-python3 scripts/check.py <Tongcap 저장소 경로> --online   # 바깥 링크(App Store·처리방침)까지 실제로 요청
+python3 scripts/check.py <Tongcap 저장소 경로>
+python3 scripts/check.py <Tongcap 저장소 경로> --online
 ```
 
-보는 것: 사이트 파일만 있는지 · 로컬 서버로 모든 페이지 200 · 사이트 안 링크가 있는 파일을 가리키는지 · `<script>`·외부 글꼴·분석 0 · mailto 는 `philab.help@gmail.com` 하나 · 개인 이름 0 · `lang`·`hreflang` 짝 · Tongcap 이름·부제가 Tongcap 저장소 `docs/스토어-문구.md` 와, 처리방침 링크가 `PolicyPage.swift` 와, 앱 ID 가 `docs/출시-신고값.md` 와 글자까지 같은지. 시작할 때 사본을 일부러 깨뜨려(고정본 다섯) 규칙이 떨어지는지 스스로 본다. Tongcap 저장소 경로가 틀리면 건너뛰지 않고 실패한다.
+기존 검사기는 앱 소스 저장소의 `docs/스토어-문구.md`, `PolicyPage.swift`, `docs/출시-신고값.md`를 기준으로 앱 이름·부제·정책 링크·앱 ID를 대조합니다. 소스 저장소가 없으면 이 명령은 실패합니다. 그 밖에 8개 페이지의 언어 연결, 로컬 링크, HTTP 응답, 외부 자원 부재, 문의 주소, AdMob 형식을 확인하고, 오류를 주입하는 6개 고정본으로 검사기 자체도 검증합니다.
 
-스토어 이름·부제나 처리방침 주소가 바뀌면 Tongcap 저장소를 먼저 고치고, 여기 HTML 여섯 장(+ 홈 카드 부제 둘)을 같은 글자로 고친 뒤 검사를 돌린다.
+스토어 이름·부제나 정책 주소를 변경할 때에는 앱 저장소를 기준으로 모든 언어 페이지와 홈 카드의 값을 함께 수정합니다. 기능이나 가격 정책을 변경하면 6개 언어의 기능·요금·FAQ 문구도 함께 확인합니다. 가격은 지역별로 다르므로 사이트에 금액을 고정하지 않습니다.
 
-## 앱 폴더 더하는 법
+디자인 변경 후에는 데스크톱과 320px·390px 모바일 너비에서 줄바꿈, 가로 넘침, 언어 선택, FAQ, 페이지 내 이동, 다운로드·지원 링크를 확인합니다. `canonical`, `hreflang`, Open Graph 메타데이터는 각 페이지의 실제 주소를 유지해야 합니다.
 
-1. `<앱>/index.html`(영어) 와 `<앱>/<언어>/index.html` 을 `tongcap/` 꼴 그대로 만든다 — 머리의 `hreflang` 대체 링크(자기 자신·`x-default` 포함)를 모든 언어 페이지에 똑같이, 언어 고르기 `<details>` 는 지금 언어에 `aria-current="page"`.
-2. 아이콘은 `<앱>/icon.png`(256px, `alt=""`).
-3. 홈 두 장(`index.html`·`en/index.html`)의 "앱" 절에 `app-card` 를 하나씩 더한다 — 카드는 같은 언어 페이지로.
-4. `scripts/check.py` 는 지금 Tongcap 의 이름·부제·처리방침만 대조한다. 새 앱의 기준 파일이 생기면 같은 꼴로 더한다.
+## 배포
 
-## App Store 배지 넣는 자리
-
-지금은 배지 대신 글자 링크다(`<a class="badge">` — 그 언어의 "App Store에서 다운로드" 문구). Apple 공식 검정 배지 SVG 를 받으면:
-
-| 언어 | 파일 | 쓰는 페이지 |
-|---|---|---|
-| ko | `badges/app-store-ko.svg` | `tongcap/ko/` |
-| en | `badges/app-store-en.svg` | `tongcap/` |
-| es | `badges/app-store-es.svg` | `tongcap/es/` |
-| ja | `badges/app-store-ja.svg` | `tongcap/ja/` |
-| zh-Hans | `badges/app-store-zh-Hans.svg` | `tongcap/zh-Hans/` |
-| zh-Hant | `badges/app-store-zh-Hant.svg` | `tongcap/zh-Hant/` |
-
-- `<a class="badge">` 안의 글자를 `<img src="../../badges/app-store-ko.svg" alt="(배지에 쓰인 그 언어 문구)">` 로 바꾼다(영어 페이지는 `../badges/…`). 높이는 `site.css` 가 3rem(48px) — Apple 최소 40px, 둘레 빈칸은 높이의 1/4.
-- 배지 그림은 고치거나 색을 바꾸지 않고, 한 화면에 하나만, Apple 서버에서 직접 불러오지 않는다(방문자 정보가 넘어간다 — 저장소에 둔다).
-- 배지를 쓰면 바닥 상표 표기에 Apple 과 Apple 로고를 더한다(예: "Apple, Apple 로고, iPhone 및 App Store는 …").
-
-## 지원 링크 넣는 자리
-
-Tongcap 지원 페이지(Notion 공개본) 주소 기록을 아직 찾지 못해 "도움말" 묶음에 지원 줄이 없다. 주소가 정해지면 처리방침 줄 아래에 같은 꼴로 더한다:
-
-```html
-<li><a href="(그 언어 지원 주소)">지원<span class="ext" aria-hidden="true">↗</span></a></li>
-```
-
-줄 이름: ko 지원 · en Support · es Soporte · ja サポート · zh-Hans 支持 · zh-Hant 支援.
-
-## 공개 순서
-
-밖으로 나가는 일이라 허락을 받은 뒤에 한다.
+이 저장소는 이미 GitHub Pages에 연결되어 있으며 `main` 브랜치의 루트가 공개 사이트에 자동 배포됩니다. 변경 내용을 검토하고 검증한 뒤 반영합니다. 공개 반영은 허락을 받은 뒤 진행합니다.
 
 ```bash
-python3 scripts/check.py <Tongcap 저장소 경로> --online      # 1. 통과 확인
-gh repo create philab-apps/philab-apps.github.io --public \
-  --source . --remote origin --push                         # 2. 저장소 만들고 main 푸시
-gh api -X POST repos/philab-apps/philab-apps.github.io/pages \
-  -f 'source[branch]=main' -f 'source[path]=/'              # 3. Pages 켜기(이미 켜졌으면 409 — 괜찮다)
-gh api repos/philab-apps/philab-apps.github.io/pages --jq '.status, .html_url'   # 4. built 확인
-curl -sI https://philab-apps.github.io/tongcap/ | head -1   # 5. 200 확인(처음은 몇 분 걸린다)
+gh api repos/philab-apps/philab-apps.github.io/pages --jq '.status, .html_url'
 ```
 
-`app-ads.txt` 는 AdMob 게시자 ID 가 나온 뒤 뿌리에 둔다(그 전에는 만들지 않는다).
+기존 앱 지원·정책 주소와 `app-ads.txt`는 App Store 및 광고 설정에서 참조될 수 있으므로 디자인 수정 시 유지합니다.

@@ -1,0 +1,24 @@
+{
+  "apps": [
+    {
+      "id": "tongcap",
+      "name": "Tongcap",
+      "icon": "tongcap/icon.png",
+      "platform": "iPhone",
+      "locales": {
+        "ko": {
+          "path": "tongcap/ko/",
+          "subtitle": "긴 웹페이지·대화를 한 장의 스크린샷으로",
+          "description": "긴 웹페이지와 스크롤 동영상을 한 장의 이미지로. 필요한 부분을 정리해 저장하고 공유하세요.",
+          "tags": ["전체 페이지 캡처", "스크롤 동영상", "이미지 편집"]
+        },
+        "en": {
+          "path": "tongcap/",
+          "subtitle": "Full Page Capture & Long Chats",
+          "description": "Turn long web pages and scrolling videos into one image. Tidy it up, save it, and share the parts that matter.",
+          "tags": ["Full-page capture", "Scrolling videos", "Image editing"]
+        }
+      }
+    }
+  ]
+}

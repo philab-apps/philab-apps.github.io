@@ -1980,3 +1980,84 @@ ul,ol {
 @media (max-width: 480px) {
   :lang(ja) .product-promise { font-size: clamp(26px, 8vw, 38px); }
 }
+
+/* Studio identity is separate from any individual app. */
+.studio-art {
+  position: relative;
+  aspect-ratio: 1.04;
+  overflow: hidden;
+  container-type: inline-size;
+  border-radius: 18px;
+  background: var(--soft);
+  background-image: radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.studio-art-top, .studio-art-bottom {
+  position: absolute;
+  left: 26px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  color: var(--muted);
+}
+.studio-art-top { top: 26px; }
+.studio-art-bottom { bottom: 26px; line-height: 1.7; }
+.studio-art-arrow { position: absolute; right: 26px; bottom: 23px; font-size: 38px; color: var(--accent); line-height: 1; }
+.brand-sculpture { position: absolute; width: 56%; aspect-ratio: 1; left: 24%; top: 15%; transform: rotate(-11deg); }
+.brand-block { position: absolute; width: 45%; height: 45%; border-radius: 4cqw; background: #f15935; box-shadow: 0 12px 0 #bd3b22, 0 20px 25px #33271a1a; }
+.block-one { left: 0; top: 0; display: grid; place-items: center; }
+.block-one i { width: 57%; height: 57%; border: 1px solid #ffb393; border-radius: 50%; }
+.block-two { right: 0; top: 0; display: flex; align-items: center; justify-content: center; gap: 8%; background: #ff7951; box-shadow: 0 12px 0 #d34a2b, 0 20px 25px #33271a1a; }
+.block-two i { width: 10%; height: 42%; border: 1px solid #ffd4b5; border-radius: 99px; }
+.block-two i:nth-child(2) { height: 61%; }
+.block-three { left: 0; bottom: 0; display: grid; place-items: center; }
+.block-three i { width: 46%; height: 46%; border: 1px solid #ffb393; transform: rotate(45deg); border-radius: 2cqw; }
+.sculpture-plus { position: absolute; right: 13%; bottom: 9%; font-size: 11cqw; line-height: 1; font-weight: 200; color: var(--muted); }
+
+/* Each published app is one list item. A single card gets a wider layout. */
+.catalog-heading { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 9%; margin-bottom: 38px; }
+.catalog-heading .eyebrow { margin-bottom: 22px; }
+.catalog-heading .section-description { margin: 0 0 4px; }
+.app-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 0; }
+.app-grid > li { min-width: 0; }
+.app-grid > li:only-child { grid-column: 1 / -1; }
+.catalog-card { padding: 0; min-height: 0; height: 100%; overflow: hidden; border-color: var(--line); background: var(--paper); }
+.catalog-art { position: relative; display: grid; place-items: center; min-height: 250px; overflow: hidden; background: var(--soft); }
+.catalog-art-grid { position: absolute; width: 220px; height: 220px; border: 1px solid var(--line); border-radius: 44px; transform: rotate(-14deg); }
+.catalog-art-grid:before { content: ''; position: absolute; inset: 16px; border: 1px solid var(--line); border-radius: 33px; }
+.catalog-art img { position: relative; width: 110px; height: 110px; border-radius: 26px; transform: rotate(-7deg); box-shadow: 0 14px 25px #222b2520; }
+.catalog-art-label { position: absolute; left: 25px; bottom: 20px; font-size: 9px; letter-spacing: .12em; color: var(--muted); }
+.catalog-copy { padding: 28px 32px; display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.catalog-copy .app-card-top { margin: 0; }
+.catalog-copy .app-name { margin-top: 12px; font-size: 36px; }
+.catalog-copy .app-sub { font-size: 13px; font-weight: 550; color: var(--ink); }
+.catalog-description { margin-top: 18px; font-size: 13px; line-height: 1.85; color: var(--muted); }
+.catalog-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-block: 22px; }
+.catalog-tags > span { padding: 5px 9px; border: 1px solid var(--line); border-radius: 99px; color: var(--muted); font-size: 9px; }
+.catalog-copy .app-card-bottom { margin-top: auto; }
+.app-grid > li:only-child .catalog-card { display: grid; grid-template-columns: 1fr 1fr; }
+.app-grid > li:only-child .catalog-art { min-height: 390px; }
+.app-grid > li:only-child .catalog-art img { width: 144px; height: 144px; border-radius: 32px; }
+.app-grid > li:only-child .catalog-art-grid { width: 280px; height: 280px; border-radius: 58px; }
+.app-grid > li:only-child .catalog-art-grid:before { inset: 22px; border-radius: 45px; }
+.app-grid > li:only-child .catalog-copy { padding: 34px 40px; }
+@media (max-width: 760px) {
+  .studio-art { width: 100%; max-width: 540px; margin-inline: auto; aspect-ratio: 1.18; }
+  .studio-art-top, .studio-art-bottom { left: 22px; font-size: 8px; }
+  .studio-art-top { top: 22px; }
+  .studio-art-bottom { bottom: 22px; }
+  .brand-sculpture { width: 50%; left: 27%; top: 14%; }
+  .catalog-heading { grid-template-columns: 1fr; gap: 18px; margin-bottom: 30px; }
+  .catalog-heading .eyebrow { margin-bottom: 19px; }
+  .app-grid { grid-template-columns: 1fr; }
+  .app-grid > li:only-child .catalog-card { display: flex; }
+  .app-grid > li:only-child .catalog-art { min-height: 260px; }
+  .app-grid > li:only-child .catalog-art img { width: 110px; height: 110px; border-radius: 26px; }
+  .app-grid > li:only-child .catalog-art-grid { width: 220px; height: 220px; border-radius: 44px; }
+  .app-grid > li:only-child .catalog-art-grid:before { inset: 16px; border-radius: 33px; }
+  .catalog-copy, .app-grid > li:only-child .catalog-copy { padding: 26px; }
+  .catalog-copy .app-name { font-size: 33px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .catalog-card:hover { transform: none; }
+}

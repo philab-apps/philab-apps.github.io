@@ -32,7 +32,7 @@ STORE_LOC = {'ko': 'ko', 'en': 'en-US', 'es': 'es-ES', 'ja': 'ja', 'zh-Hans': 'z
 POLICY_LABEL = {'ko': '개인정보 처리방침', 'en': 'Privacy Policy', 'es': 'Política de privacidad',
                 'ja': 'プライバシーポリシー', 'zh-Hans': '隐私政策', 'zh-Hant': '隱私權政策'}
 SELF = 'scripts/check.py'
-ALLOWED_FILES = [r'README\.md', r'\.nojekyll', r'\.gitignore', r'site\.css', r'app-ads\.txt', re.escape(SELF),
+ALLOWED_FILES = [r'README\.md', r'apps\.json', r'scripts/render_apps\.py', r'\.nojekyll', r'\.gitignore', r'site\.css', r'app-ads\.txt', re.escape(SELF),
                  r'(?:[A-Za-z0-9-]+/)*index\.html', r'[A-Za-z0-9-]+/(?:[A-Za-z0-9-]+/)*[A-Za-z0-9-]+\.(?:png|svg)']
 BANNED_TEXT = ['fonts.googleapis', 'fonts.gstatic', 'googletagmanager', 'google-analytics', 'gtag(', 'document.cookie']
 PERSONAL = re.compile(r'phil+ip|필립|\bchung\b', re.I)  # 개인 이름 — 상호 "필랩·Philab" 은 걸리지 않는다

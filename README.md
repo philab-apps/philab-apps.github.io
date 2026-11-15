@@ -106,3 +106,7 @@ python3 scripts/render_documents.py --check
 4. 이전 버전 사용자를 위해 Notion은 당분간 유지합니다. 유지 기간에 정책 내용을 변경하면 두 공개 사본도 일치하도록 관리합니다.
 
 전환 안내는 [Apple의 앱 개인정보 관리 안내](https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy/)와 [버전별 앱 정보 안내](https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information/)를 참고합니다.
+
+### 1.1 개인정보 처리방침 갱신 (2026-11-16)
+
+여섯 언어 정책은 Tongcap 앱의 `App/Resources/<언어>.lproj/PrivacyPolicy.md`와 같은 원문으로 갱신했습니다. 보상형 광고와 실패 진단 항목을 포함하며 시행일은 2026-11-16입니다. `documents.json`의 `source`는 이 앱 원문 경로이고, 최초 이전 출처는 `previous_source`로 남깁니다. 지원 문서는 기존 원문을 유지합니다. 앱의 정책 URL도 GitHub Pages 주소를 사용합니다.

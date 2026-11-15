@@ -111,10 +111,9 @@ def load_truth(tongcap):
         return open(p, encoding='utf-8').read()
 
     swift = read('Packages/TallShotCore/Sources/TallShotCore/PolicyPage.swift')
-    base = re.search(r'URL\(string: "(https://[^"]+?)\\\(id\)"\)', swift)
-    ids = re.findall(r'case \.(\w+): "([0-9a-f]{32})"', swift)
+    addresses = re.findall(r'case \.(\w+): "(https://philab-apps\.github\.io/tongcap/[^\"]+)"', swift)
     case_lang = {'zhHans': 'zh-Hans', 'zhHant': 'zh-Hant'}
-    policy = {case_lang.get(c, c): base.group(1) + i for c, i in ids} if base else {}
+    policy = {case_lang.get(c, c): address for c, address in addresses}
     if set(policy) != set(LANGS):
         sys.exit(f'실패: PolicyPage.swift 에서 처리방침 주소 여섯을 못 읽음(읽은 것 {sorted(policy)})')
 
@@ -184,7 +183,7 @@ def check_static(root, truth):
         if digest != d['source_text_sha256']:
             err.append(f'{d["path"]}: 원문 내용 해시 불일치')
         entry = migration[d['lang']][d['kind']]
-        if entry['github_pages_url'] != SITE + d['path'] or entry['notion_url'] != d['source']:
+        if entry['github_pages_url'] != SITE + d['path'] or entry['notion_url'] != d.get('previous_source', d['source']):
             err.append(f'{d["path"]}: 이전 URL 목록과 원문 출처 불일치')
         if SITE + d['path'] not in pages:
             err.append(f'{d["path"]}: 이전 문서 없음')
@@ -408,7 +407,7 @@ FIXTURES = [  # (파일, 바꿀 글, 새 글, 나와야 할 오류 낱말)
     ('tongcap/zh-Hant/index.html', '<p class="sub">網頁與聊天記錄完整存成一張長圖</p>', '<p class="sub">網頁與聊天記錄完整存成一張圖</p>', '부제(.sub)'),
     ('app-ads.txt', 'DIRECT', 'RESELLER', 'app-ads.txt'),
     ('docs/메모.md', None, '# 내부 메모', '사이트 파일 아님'),
-    ('tongcap/ko/privacy/index.html', '시행일: 2026년 11월 11일', '시행일: 2026년 11월 15일', '원문 내용 불일치'),
+    ('tongcap/ko/privacy/index.html', '시행일: 2026년 11월 16일', '시행일: 2026년 11월 15일', '원문 내용 불일치'),
     ('tongcap/support/index.html', 'Tap &quot;Restore Purchases&quot; in Settings.', 'Tap Settings.', '원문 내용 불일치'),
 ]
 

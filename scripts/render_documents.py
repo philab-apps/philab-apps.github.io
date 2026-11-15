@@ -129,7 +129,7 @@ def main():
     assert len(documents) == 12 and {(d['lang'], d['kind']) for d in documents} == expected
     errors = []
     for doc in documents:
-        # The hash is of the original Notion text, including effective dates and paragraph order.
+        # 원문 해시에는 시행일과 문단 순서가 포함된다. source는 앱 원문 또는 이전 Notion 문서다.
         digest = hashlib.sha256('\n'.join(b['text'] for b in doc['blocks']).encode()).hexdigest()
         if digest != doc['source_text_sha256']:
             errors.append(f'Original text changed: {doc["path"]}')

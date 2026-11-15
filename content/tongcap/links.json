@@ -1,0 +1,74 @@
+[
+  {
+    "language": "ko",
+    "app_store_locale": "ko",
+    "privacy": {
+      "notion_url": "https://deep-vinca-12d.notion.site/3f7330fb19188136b784d8dc15381d94",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/ko/privacy/"
+    },
+    "support": {
+      "notion_url": "https://deep-vinca-12d.notion.site/c5a5a2864f664693b91832ade14746e4",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/ko/support/"
+    }
+  },
+  {
+    "language": "en",
+    "app_store_locale": "en-US",
+    "privacy": {
+      "notion_url": "https://deep-vinca-12d.notion.site/3f7330fb191881098a30db9620d9de74",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/privacy/"
+    },
+    "support": {
+      "notion_url": "https://deep-vinca-12d.notion.site/8f964ee5942149818dd2c9474bbc0ee4",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/support/"
+    }
+  },
+  {
+    "language": "ja",
+    "app_store_locale": "ja",
+    "privacy": {
+      "notion_url": "https://deep-vinca-12d.notion.site/3f7330fb191881dc8f13ce1ecac616c2",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/ja/privacy/"
+    },
+    "support": {
+      "notion_url": "https://deep-vinca-12d.notion.site/8e9b10ea30cd4e24923dfe67e57627ed",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/ja/support/"
+    }
+  },
+  {
+    "language": "es",
+    "app_store_locale": "es-ES",
+    "privacy": {
+      "notion_url": "https://deep-vinca-12d.notion.site/3f7330fb191881a6bd7aebed9e66e2fd",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/es/privacy/"
+    },
+    "support": {
+      "notion_url": "https://deep-vinca-12d.notion.site/7b8f966294e744e7b8a52af9eebfde43",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/es/support/"
+    }
+  },
+  {
+    "language": "zh-Hans",
+    "app_store_locale": "zh-Hans",
+    "privacy": {
+      "notion_url": "https://deep-vinca-12d.notion.site/3f7330fb1918813dbaffc9d29c39e459",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/zh-Hans/privacy/"
+    },
+    "support": {
+      "notion_url": "https://deep-vinca-12d.notion.site/3ff5e5512c2b42e68e6f38e40ac377c5",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/zh-Hans/support/"
+    }
+  },
+  {
+    "language": "zh-Hant",
+    "app_store_locale": "zh-Hant",
+    "privacy": {
+      "notion_url": "https://deep-vinca-12d.notion.site/3f7330fb1918816cacd7e6dbd45f4c81",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/zh-Hant/privacy/"
+    },
+    "support": {
+      "notion_url": "https://deep-vinca-12d.notion.site/d67e48dda33345d8bd6f64ee2c2dc0ce",
+      "github_pages_url": "https://philab-apps.github.io/tongcap/zh-Hant/support/"
+    }
+  }
+]

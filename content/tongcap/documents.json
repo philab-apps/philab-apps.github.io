@@ -6,7 +6,7 @@
     "source": "App/Resources/en.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/privacy/",
-    "source_text_sha256": "663b4ea96b797d38c94c86ce010e324022a0937c368841ec42e2fc9a2d9eea6e",
+    "source_text_sha256": "d2282fc92349fd57bca99d9cd4193ab8e5e4647f440b4f03d5a3e891d41c2291",
     "blocks": [
       {
         "type": "paragraph",
@@ -97,6 +97,11 @@
         "type": "bullet",
         "text": "What happens in the app: a capture starting, finishing or failing, exporting with a free trial, the purchase screen appearing and closing (and how it closed: purchase, restore, free export, export after watching an ad, or simply closed), the result of tapping a purchase or restore button (completed, cancelled, waiting for approval, failed, product details could not be loaded, restored, or nothing to restore), an export finishing (whether it was a web capture or a screen recording, whether it was saved to Photos, shared or copied, the file format, whether mosaics, crops, annotations, splitting or stitching were used, and whether you have purchased), and how many captures and folders are in the library when you open the app. The only values attached are fixed kinds and ranges (for example \"web capture\", \"4–10 screens tall\", \"5–15 seconds\", the failure reason \"network\", or \"6–20 captures\"). For edits we attach only whether they were used, never what was hidden or how many. No price, currency, product ID or transaction ID is attached to a purchase or restore result. When a capture fails, we attach as much of the cause as we need to fix it: the stage where it stopped, a fixed kind of error name, the iOS area the error came from (such as network, web engine, files or video) and that area's error code, ranges for the height captured before the failure, the time taken and the recording length, and the screen orientation of a recording. If the app was shut down during a capture, the next time you open it we record \"interrupted\" and the stage it was at. Page addresses, domains and error messages are never attached",
         "html": "What happens in the app: a capture starting, finishing or failing, exporting with a free trial, the purchase screen appearing and closing (and how it closed: purchase, restore, free export, export after watching an ad, or simply closed), the result of tapping a purchase or restore button (completed, cancelled, waiting for approval, failed, product details could not be loaded, restored, or nothing to restore), an export finishing (whether it was a web capture or a screen recording, whether it was saved to Photos, shared or copied, the file format, whether mosaics, crops, annotations, splitting or stitching were used, and whether you have purchased), and how many captures and folders are in the library when you open the app. The only values attached are fixed kinds and ranges (for example &quot;web capture&quot;, &quot;4–10 screens tall&quot;, &quot;5–15 seconds&quot;, the failure reason &quot;network&quot;, or &quot;6–20 captures&quot;). For edits we attach only whether they were used, never what was hidden or how many. No price, currency, product ID or transaction ID is attached to a purchase or restore result. When a capture fails, we attach as much of the cause as we need to fix it: the stage where it stopped, a fixed kind of error name, the iOS area the error came from (such as network, web engine, files or video) and that area&#x27;s error code, ranges for the height captured before the failure, the time taken and the recording length, and the screen orientation of a recording. If the app was shut down during a capture, the next time you open it we record &quot;interrupted&quot; and the stage it was at. Page addresses, domains and error messages are never attached"
+      },
+      {
+        "type": "bullet",
+        "text": "We also record when a purchase or restore attempt starts. Failures use only fixed categories: network, store unavailable, permission, transaction verification, missing product information, system, or other. We do not send error messages, payment details, or account information.",
+        "html": "We also record when a purchase or restore attempt starts. Failures use only fixed categories: network, store unavailable, permission, transaction verification, missing product information, system, or other. We do not send error messages, payment details, or account information."
       },
       {
         "type": "bullet",
@@ -875,7 +880,7 @@
     "source": "App/Resources/es.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/es/privacy/",
-    "source_text_sha256": "f02db33487f1d942a3397b28900e36977b257d53b4efcb76c4adedea3e35ee5a",
+    "source_text_sha256": "62ec6ca5d24f8d355d8c9e97f6eb333e1a04896c9fad99694dc945b9fe08210e",
     "blocks": [
       {
         "type": "paragraph",
@@ -966,6 +971,11 @@
         "type": "bullet",
         "text": "Lo que ocurre en la app: que una captura empieza, termina o falla, que exportas con una prueba gratuita, que la pantalla de compra aparece y se cierra (y cómo se cerró: compra, restauración, exportación gratuita, exportación tras ver un anuncio o simplemente cerrada), el resultado de tocar un botón de compra o de restauración (completada, cancelada, pendiente de aprobación, fallida, sin poder cargar el producto, restaurada o sin compras que restaurar), que termina una exportación (si era una captura web o una grabación de pantalla, si se guardó en Fotos, se compartió o se copió, el formato del archivo, si se usaron mosaicos, recortes, anotaciones, la división o la unión de fragmentos, y si has comprado) y cuántas capturas y carpetas hay en la biblioteca al abrir la app. Solo se adjuntan valores de tipos y rangos fijos (por ejemplo, “captura web”, “de 4 a 10 pantallas de alto”, “de 5 a 15 segundos”, el motivo de fallo “red” o “de 6 a 20 capturas”). De las ediciones solo se adjunta si se usaron, nunca qué se ocultó ni cuántas. Al resultado de una compra o restauración no se le adjunta precio, moneda, identificador de producto ni identificador de transacción. Cuando falla una captura, adjuntamos la parte de la causa que necesitamos para corregirla: la fase en que se detuvo, un nombre de tipo de error fijo, el área de iOS de la que vino el error (como red, motor web, archivos o vídeo) y el código de error de esa área, rangos de la altura capturada antes del fallo, del tiempo empleado y de la duración de la grabación, y la orientación de pantalla de una grabación. Si la app se cerró durante una captura, la próxima vez que la abres registramos “interrumpida” y la fase en que estaba. Nunca se adjuntan direcciones de páginas, dominios ni mensajes de error",
         "html": "Lo que ocurre en la app: que una captura empieza, termina o falla, que exportas con una prueba gratuita, que la pantalla de compra aparece y se cierra (y cómo se cerró: compra, restauración, exportación gratuita, exportación tras ver un anuncio o simplemente cerrada), el resultado de tocar un botón de compra o de restauración (completada, cancelada, pendiente de aprobación, fallida, sin poder cargar el producto, restaurada o sin compras que restaurar), que termina una exportación (si era una captura web o una grabación de pantalla, si se guardó en Fotos, se compartió o se copió, el formato del archivo, si se usaron mosaicos, recortes, anotaciones, la división o la unión de fragmentos, y si has comprado) y cuántas capturas y carpetas hay en la biblioteca al abrir la app. Solo se adjuntan valores de tipos y rangos fijos (por ejemplo, “captura web”, “de 4 a 10 pantallas de alto”, “de 5 a 15 segundos”, el motivo de fallo “red” o “de 6 a 20 capturas”). De las ediciones solo se adjunta si se usaron, nunca qué se ocultó ni cuántas. Al resultado de una compra o restauración no se le adjunta precio, moneda, identificador de producto ni identificador de transacción. Cuando falla una captura, adjuntamos la parte de la causa que necesitamos para corregirla: la fase en que se detuvo, un nombre de tipo de error fijo, el área de iOS de la que vino el error (como red, motor web, archivos o vídeo) y el código de error de esa área, rangos de la altura capturada antes del fallo, del tiempo empleado y de la duración de la grabación, y la orientación de pantalla de una grabación. Si la app se cerró durante una captura, la próxima vez que la abres registramos “interrumpida” y la fase en que estaba. Nunca se adjuntan direcciones de páginas, dominios ni mensajes de error"
+      },
+      {
+        "type": "bullet",
+        "text": "También registramos el inicio de un intento de compra o restauración. Los fallos se clasifican únicamente como red, tienda no disponible, permisos, verificación de la transacción, información del producto no disponible, sistema u otros. No enviamos mensajes de error ni datos de pago o de la cuenta.",
+        "html": "También registramos el inicio de un intento de compra o restauración. Los fallos se clasifican únicamente como red, tienda no disponible, permisos, verificación de la transacción, información del producto no disponible, sistema u otros. No enviamos mensajes de error ni datos de pago o de la cuenta."
       },
       {
         "type": "bullet",
@@ -1749,7 +1759,7 @@
     "source": "App/Resources/ja.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/ja/privacy/",
-    "source_text_sha256": "7e8ae6a7afd5e2fa1a9d57c18001965c1467806165d0e0e7673f14b170bb2fdd",
+    "source_text_sha256": "42baebcf3875ea2b03e4f34f254a0a6dc525ceadf7b724fb203fe84feb4b25ba",
     "blocks": [
       {
         "type": "paragraph",
@@ -1840,6 +1850,11 @@
         "type": "bullet",
         "text": "アプリ内で起きたこと: キャプチャの開始・完了・失敗、無料体験での書き出し、購入画面の表示と終了（購入・復元・無料で書き出し・広告を見て書き出し・そのまま閉じる、のどれで閉じたか）、購入・復元ボタンを押した結果（完了・キャンセル・承認待ち・失敗・商品情報を読み込めない・復元済み・復元する購入なし）、書き出しの完了（Web キャプチャか画面収録か、“写真”への保存・共有・コピーのどれか、ファイル形式、モザイク・切り取り・注釈・分割・つなぎ合わせを使ったか、購入済みか）、アプリを開いたときのライブラリのキャプチャ数とフォルダ数。付く値は決められた種類と区間だけです（例: 「Web キャプチャ」「画面 4〜10 枚分の高さ」「5〜15 秒」、失敗の理由「ネットワーク」、キャプチャ「6〜20 件」）。編集は使ったかどうかだけを付け、何をいくつ隠したかは付けません。購入・復元の結果には、価格・通貨・商品 ID・取引 ID を付けません。キャプチャが失敗したときは、直すために必要な範囲で原因を付けます。止まった段階、決められた種類のエラー名、エラーの出どころの iOS の領域（ネットワーク・Web エンジン・ファイル・動画など）とその領域のエラーコード、失敗するまでに取り込んだ高さ・かかった時間・録画の長さの区間、録画の画面の向きです。キャプチャ中にアプリが終了した場合は、次に開いたときに「中断」と、そのときの段階を記録します。ページのアドレス・ドメイン・エラーメッセージは付けません",
         "html": "アプリ内で起きたこと: キャプチャの開始・完了・失敗、無料体験での書き出し、購入画面の表示と終了（購入・復元・無料で書き出し・広告を見て書き出し・そのまま閉じる、のどれで閉じたか）、購入・復元ボタンを押した結果（完了・キャンセル・承認待ち・失敗・商品情報を読み込めない・復元済み・復元する購入なし）、書き出しの完了（Web キャプチャか画面収録か、“写真”への保存・共有・コピーのどれか、ファイル形式、モザイク・切り取り・注釈・分割・つなぎ合わせを使ったか、購入済みか）、アプリを開いたときのライブラリのキャプチャ数とフォルダ数。付く値は決められた種類と区間だけです（例: 「Web キャプチャ」「画面 4〜10 枚分の高さ」「5〜15 秒」、失敗の理由「ネットワーク」、キャプチャ「6〜20 件」）。編集は使ったかどうかだけを付け、何をいくつ隠したかは付けません。購入・復元の結果には、価格・通貨・商品 ID・取引 ID を付けません。キャプチャが失敗したときは、直すために必要な範囲で原因を付けます。止まった段階、決められた種類のエラー名、エラーの出どころの iOS の領域（ネットワーク・Web エンジン・ファイル・動画など）とその領域のエラーコード、失敗するまでに取り込んだ高さ・かかった時間・録画の長さの区間、録画の画面の向きです。キャプチャ中にアプリが終了した場合は、次に開いたときに「中断」と、そのときの段階を記録します。ページのアドレス・ドメイン・エラーメッセージは付けません"
+      },
+      {
+        "type": "bullet",
+        "text": "購入・復元を開始したことも記録します。失敗の原因は、ネットワーク、ストア利用不可、権限、取引の検証、商品情報なし、システム、その他の固定分類のみです。エラーメッセージ、支払い情報、アカウント情報は送信しません。",
+        "html": "購入・復元を開始したことも記録します。失敗の原因は、ネットワーク、ストア利用不可、権限、取引の検証、商品情報なし、システム、その他の固定分類のみです。エラーメッセージ、支払い情報、アカウント情報は送信しません。"
       },
       {
         "type": "bullet",
@@ -2703,7 +2718,7 @@
     "source": "App/Resources/ko.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/ko/privacy/",
-    "source_text_sha256": "733940257b3112f13e481ddd3ac7bc601ccd17b44450eeeaebe9f84e5d92d177",
+    "source_text_sha256": "d205c82ef16b05c1746688164e1c8be693465052adcf8fe78fd267b0814094f2",
     "blocks": [
       {
         "type": "paragraph",
@@ -2794,6 +2809,11 @@
         "type": "bullet",
         "text": "앱 안에서 일어난 일: 캡쳐의 시작·완료·실패, 무료 체험으로 내보내기, 결제 화면이 뜨고 닫힌 것(구매·복원·무료로 내보내기·광고를 보고 내보내기·그냥 닫기 중 어떻게 닫혔는지), 구매·복원 단추를 누른 결과(완료·취소·승인 대기·실패·상품 정보를 불러오지 못함·복원됨·복원할 구매 없음), 내보내기를 마친 것(웹 캡쳐인지 화면 기록인지, 사진 저장·공유·복사 중 무엇인지, 파일 형식, 모자이크·자르기·마크업·분할·이어 붙이기를 썼는지, 구매한 사용자인지), 앱을 열 때 보관함의 캡쳐 수와 폴더 수. 여기에 붙는 값은 정해진 종류와 구간뿐입니다(예: \"웹 캡쳐\", \"화면 4~10장 높이\", \"5~15초\", 실패 이유 \"네트워크\", 캡쳐 \"6~20개\"). 편집은 썼는지만 붙이고, 무엇을 몇 개 가렸는지는 붙이지 않습니다. 구매·복원 결과에는 가격·통화·상품 번호·거래 번호를 붙이지 않습니다. 캡쳐가 실패하면 고치는 데 필요한 만큼 원인을 붙입니다: 어느 단계에서 멈췄는지, 정해진 종류의 오류 이름, 오류가 난 iOS 영역(네트워크·웹 엔진·파일·영상 등)과 그 영역의 오류 번호, 실패까지 담은 화면 높이·걸린 시간·녹화 길이의 구간, 녹화의 화면 방향. 캡쳐 도중 앱이 꺼졌으면 다음에 열 때 \"도중에 꺼짐\" 과 그때의 단계를 남깁니다. 페이지 주소·도메인·오류 안내 글은 붙이지 않습니다",
         "html": "앱 안에서 일어난 일: 캡쳐의 시작·완료·실패, 무료 체험으로 내보내기, 결제 화면이 뜨고 닫힌 것(구매·복원·무료로 내보내기·광고를 보고 내보내기·그냥 닫기 중 어떻게 닫혔는지), 구매·복원 단추를 누른 결과(완료·취소·승인 대기·실패·상품 정보를 불러오지 못함·복원됨·복원할 구매 없음), 내보내기를 마친 것(웹 캡쳐인지 화면 기록인지, 사진 저장·공유·복사 중 무엇인지, 파일 형식, 모자이크·자르기·마크업·분할·이어 붙이기를 썼는지, 구매한 사용자인지), 앱을 열 때 보관함의 캡쳐 수와 폴더 수. 여기에 붙는 값은 정해진 종류와 구간뿐입니다(예: &quot;웹 캡쳐&quot;, &quot;화면 4~10장 높이&quot;, &quot;5~15초&quot;, 실패 이유 &quot;네트워크&quot;, 캡쳐 &quot;6~20개&quot;). 편집은 썼는지만 붙이고, 무엇을 몇 개 가렸는지는 붙이지 않습니다. 구매·복원 결과에는 가격·통화·상품 번호·거래 번호를 붙이지 않습니다. 캡쳐가 실패하면 고치는 데 필요한 만큼 원인을 붙입니다: 어느 단계에서 멈췄는지, 정해진 종류의 오류 이름, 오류가 난 iOS 영역(네트워크·웹 엔진·파일·영상 등)과 그 영역의 오류 번호, 실패까지 담은 화면 높이·걸린 시간·녹화 길이의 구간, 녹화의 화면 방향. 캡쳐 도중 앱이 꺼졌으면 다음에 열 때 &quot;도중에 꺼짐&quot; 과 그때의 단계를 남깁니다. 페이지 주소·도메인·오류 안내 글은 붙이지 않습니다"
+      },
+      {
+        "type": "bullet",
+        "text": "구매·복원 단추를 누른 시작도 기록하며, 실패 원인은 네트워크·스토어 이용 불가·권한·거래 검증·상품 정보 없음·시스템·기타 중 정해진 분류로만 남깁니다. 오류 안내 글이나 결제·계정 정보는 보내지 않습니다.",
+        "html": "구매·복원 단추를 누른 시작도 기록하며, 실패 원인은 네트워크·스토어 이용 불가·권한·거래 검증·상품 정보 없음·시스템·기타 중 정해진 분류로만 남깁니다. 오류 안내 글이나 결제·계정 정보는 보내지 않습니다."
       },
       {
         "type": "bullet",
@@ -3557,7 +3577,7 @@
     "source": "App/Resources/zh-Hans.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/zh-Hans/privacy/",
-    "source_text_sha256": "1c5a6b4faca9315026719662989619674259fa7eb05f9cd9247594e6f17f891c",
+    "source_text_sha256": "198ed276a54c7762aff4c6389eff226e29334de99b63b2bdf8cb73c8f1a5c5d8",
     "blocks": [
       {
         "type": "paragraph",
@@ -3648,6 +3668,11 @@
         "type": "bullet",
         "text": "App 内发生的事：截取的开始、完成和失败，使用免费试用导出，付款界面的显示与关闭（以及以何种方式关闭：购买、恢复、免费导出、看完广告后导出或直接关闭），点按购买或恢复按钮的结果（完成、取消、等待批准、失败、无法加载产品信息、已恢复、没有可恢复的购买），完成导出（是网页截取还是屏幕录制，存储到“照片”、共享还是拷贝，文件格式，是否使用了马赛克、裁剪、标注、分割或拼接，是否已购买），以及打开 App 时资料库中的截取数和文件夹数。附带的值只有固定的类型和区间（例如“网页截取”“4～10 屏高”“5～15 秒”，失败原因“网络”，截取“6～20 个”）。编辑只附带是否使用，不附带遮挡了什么、遮挡了几处。购买和恢复的结果不会附带价格、币种、产品编号或交易编号。截取失败时，我们会在修复所需的范围内附带原因：停止时所处的阶段、固定种类的错误名称、错误来自的 iOS 领域（如网络、网页引擎、文件或视频）及该领域的错误代码、失败前已截取高度、所用时间和录制时长的区间，以及录屏的屏幕方向。如果截取过程中 App 被关闭，下次打开时会记录“已中断”及当时所处的阶段。绝不附带网页地址、域名或错误信息",
         "html": "App 内发生的事：截取的开始、完成和失败，使用免费试用导出，付款界面的显示与关闭（以及以何种方式关闭：购买、恢复、免费导出、看完广告后导出或直接关闭），点按购买或恢复按钮的结果（完成、取消、等待批准、失败、无法加载产品信息、已恢复、没有可恢复的购买），完成导出（是网页截取还是屏幕录制，存储到“照片”、共享还是拷贝，文件格式，是否使用了马赛克、裁剪、标注、分割或拼接，是否已购买），以及打开 App 时资料库中的截取数和文件夹数。附带的值只有固定的类型和区间（例如“网页截取”“4～10 屏高”“5～15 秒”，失败原因“网络”，截取“6～20 个”）。编辑只附带是否使用，不附带遮挡了什么、遮挡了几处。购买和恢复的结果不会附带价格、币种、产品编号或交易编号。截取失败时，我们会在修复所需的范围内附带原因：停止时所处的阶段、固定种类的错误名称、错误来自的 iOS 领域（如网络、网页引擎、文件或视频）及该领域的错误代码、失败前已截取高度、所用时间和录制时长的区间，以及录屏的屏幕方向。如果截取过程中 App 被关闭，下次打开时会记录“已中断”及当时所处的阶段。绝不附带网页地址、域名或错误信息"
+      },
+      {
+        "type": "bullet",
+        "text": "我们还记录购买或恢复购买尝试的开始。失败原因仅使用固定分类：网络、商店不可用、权限、交易验证、缺少商品信息、系统或其他。不会发送错误提示、付款信息或账户信息。",
+        "html": "我们还记录购买或恢复购买尝试的开始。失败原因仅使用固定分类：网络、商店不可用、权限、交易验证、缺少商品信息、系统或其他。不会发送错误提示、付款信息或账户信息。"
       },
       {
         "type": "bullet",
@@ -4421,7 +4446,7 @@
     "source": "App/Resources/zh-Hant.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/zh-Hant/privacy/",
-    "source_text_sha256": "c1365f04b4ebf89669b66d663b79c99ec7349ec773c82994880c82e62b6a59cf",
+    "source_text_sha256": "0b65cc77e928bab0f924ddbc224e22e07e01a6b360996753424f6d747c0747a9",
     "blocks": [
       {
         "type": "paragraph",
@@ -4512,6 +4537,11 @@
         "type": "bullet",
         "text": "App 內發生的事：截取的開始、完成與失敗，使用免費試用輸出，付款畫面的顯示與關閉（以及以何種方式關閉：購買、回復、免費輸出、看完廣告後輸出或直接關閉），點按購買或回復按鈕的結果（完成、取消、等待核准、失敗、無法載入產品資訊、已回復、沒有可回復的購買），完成輸出（是網頁截取還是螢幕錄影，儲存到「照片」、分享還是拷貝，檔案格式，是否使用了馬賽克、裁剪、標註、分割或拼接，是否已購買），以及開啟 App 時資料庫中的截取數與資料夾數。附帶的值只有固定的類型與區間（例如「網頁截取」「4～10 個畫面高」「5～15 秒」，失敗原因「網路」，截取「6～20 個」）。編輯只附帶是否使用，不附帶遮擋了什麼、遮擋了幾處。購買與回復的結果不會附帶價格、幣別、產品編號或交易編號。截取失敗時，我們會在修正所需的範圍內附帶原因：停止時所處的階段、固定種類的錯誤名稱、錯誤來自的 iOS 領域（如網路、網頁引擎、檔案或影片）及該領域的錯誤代碼、失敗前已截取高度、所用時間與錄製長度的區間，以及螢幕錄影的螢幕方向。如果截取過程中 App 被關閉，下次開啟時會記錄「已中斷」及當時所處的階段。絕不附帶網頁位址、網域或錯誤訊息",
         "html": "App 內發生的事：截取的開始、完成與失敗，使用免費試用輸出，付款畫面的顯示與關閉（以及以何種方式關閉：購買、回復、免費輸出、看完廣告後輸出或直接關閉），點按購買或回復按鈕的結果（完成、取消、等待核准、失敗、無法載入產品資訊、已回復、沒有可回復的購買），完成輸出（是網頁截取還是螢幕錄影，儲存到「照片」、分享還是拷貝，檔案格式，是否使用了馬賽克、裁剪、標註、分割或拼接，是否已購買），以及開啟 App 時資料庫中的截取數與資料夾數。附帶的值只有固定的類型與區間（例如「網頁截取」「4～10 個畫面高」「5～15 秒」，失敗原因「網路」，截取「6～20 個」）。編輯只附帶是否使用，不附帶遮擋了什麼、遮擋了幾處。購買與回復的結果不會附帶價格、幣別、產品編號或交易編號。截取失敗時，我們會在修正所需的範圍內附帶原因：停止時所處的階段、固定種類的錯誤名稱、錯誤來自的 iOS 領域（如網路、網頁引擎、檔案或影片）及該領域的錯誤代碼、失敗前已截取高度、所用時間與錄製長度的區間，以及螢幕錄影的螢幕方向。如果截取過程中 App 被關閉，下次開啟時會記錄「已中斷」及當時所處的階段。絕不附帶網頁位址、網域或錯誤訊息"
+      },
+      {
+        "type": "bullet",
+        "text": "我們也記錄購買或回復購買嘗試的開始。失敗原因僅使用固定分類：網路、商店無法使用、權限、交易驗證、缺少商品資訊、系統或其他。不會傳送錯誤訊息、付款資訊或帳號資訊。",
+        "html": "我們也記錄購買或回復購買嘗試的開始。失敗原因僅使用固定分類：網路、商店無法使用、權限、交易驗證、缺少商品資訊、系統或其他。不會傳送錯誤訊息、付款資訊或帳號資訊。"
       },
       {
         "type": "bullet",

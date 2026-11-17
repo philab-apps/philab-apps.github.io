@@ -407,7 +407,7 @@ FIXTURES = [  # (파일, 바꿀 글, 새 글, 나와야 할 오류 낱말)
     ('tongcap/zh-Hant/index.html', '<p class="sub">網頁與聊天記錄完整存成一張長圖</p>', '<p class="sub">網頁與聊天記錄完整存成一張圖</p>', '부제(.sub)'),
     ('app-ads.txt', 'DIRECT', 'RESELLER', 'app-ads.txt'),
     ('docs/메모.md', None, '# 내부 메모', '사이트 파일 아님'),
-    ('tongcap/ko/privacy/index.html', '시행일: 2026년 11월 17일', '시행일: 2026년 11월 16일', '원문 내용 불일치'),
+    ('tongcap/ko/privacy/index.html', '시행일: 2026년 11월 18일', '시행일: 2026년 11월 17일', '원문 내용 불일치'),
     ('tongcap/support/index.html', 'Tap &quot;Restore Purchases&quot; in Settings.', 'Tap Settings.', '원문 내용 불일치'),
 ]
 

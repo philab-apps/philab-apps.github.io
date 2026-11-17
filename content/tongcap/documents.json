@@ -6,12 +6,12 @@
     "source": "App/Resources/en.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/privacy/",
-    "source_text_sha256": "a08abf36293a452aaf0822abab0945374925ac53f68bb2c4a5b3655d2beaed61",
+    "source_text_sha256": "9a526124d7268927979442cb17f91b0c841f5e24209f0cc1274a550e720dbedb",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Effective date: November 17, 2026",
-        "html": "Effective date: November 17, 2026"
+        "text": "Effective date: November 18, 2026",
+        "html": "Effective date: November 18, 2026"
       },
       {
         "type": "paragraph",
@@ -112,6 +112,11 @@
         "type": "bullet",
         "text": "Records Google's analytics tool keeps on its own: when you first opened the app with usage statistics on, when you open the app and how long you use it, and app and iOS updates. If you make an App Store purchase, the tool may also record the purchase on its own, including the product ID, price, currency and quantity",
         "html": "Records Google&#x27;s analytics tool keeps on its own: when you first opened the app with usage statistics on, when you open the app and how long you use it, and app and iOS updates. If you make an App Store purchase, the tool may also record the purchase on its own, including the product ID, price, currency and quantity"
+      },
+      {
+        "type": "bullet",
+        "text": "When usage statistics are on, we also record actual use of markup tools, splitting, recording stitching and text extraction independently of export, plus text extraction starting, completing, failing, being cancelled or ending when the screen closes; only predefined tool types, capture types, failure categories and whether text is newly recognized or reopened from storage are attached, never capture identifiers, recognized or edited text, URLs or error messages.",
+        "html": "When usage statistics are on, we also record actual use of markup tools, splitting, recording stitching and text extraction independently of export, plus text extraction starting, completing, failing, being cancelled or ending when the screen closes; only predefined tool types, capture types, failure categories and whether text is newly recognized or reopened from storage are attached, never capture identifiers, recognized or edited text, URLs or error messages."
       },
       {
         "type": "bullet",
@@ -815,7 +820,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb191881098a30db9620d9de74",
-    "updated_on": "2026-11-17"
+    "updated_on": "2026-11-18"
   },
   {
     "lang": "en",
@@ -885,12 +890,12 @@
     "source": "App/Resources/es.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/es/privacy/",
-    "source_text_sha256": "0a10a3065e455ea4bcc542a510dd26be0352d1adbec951708f2e39765eaa7847",
+    "source_text_sha256": "b3d4220883a6dd0cc0d4ee27b168e8aa1a9c8a4ea01e2d243eac3b9fd43cb3f0",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Fecha de entrada en vigor: 17 de noviembre de 2026",
-        "html": "Fecha de entrada en vigor: 17 de noviembre de 2026"
+        "text": "Fecha de entrada en vigor: 18 de noviembre de 2026",
+        "html": "Fecha de entrada en vigor: 18 de noviembre de 2026"
       },
       {
         "type": "paragraph",
@@ -991,6 +996,11 @@
         "type": "bullet",
         "text": "Registros que la herramienta de análisis de Google guarda por su cuenta: cuándo abriste la app por primera vez con las estadísticas activadas, cuándo abres la app y cuánto tiempo la usas, y las actualizaciones de la app y de iOS. Si compras en el App Store, la herramienta también puede registrar la compra por su cuenta, con el ID del producto, el precio, la moneda y la cantidad",
         "html": "Registros que la herramienta de análisis de Google guarda por su cuenta: cuándo abriste la app por primera vez con las estadísticas activadas, cuándo abres la app y cuánto tiempo la usas, y las actualizaciones de la app y de iOS. Si compras en el App Store, la herramienta también puede registrar la compra por su cuenta, con el ID del producto, el precio, la moneda y la cantidad"
+      },
+      {
+        "type": "bullet",
+        "text": "Cuando las estadísticas están activadas, también registramos el uso real de herramientas de anotación, división, unión de grabaciones y extracción de texto, independientemente de la exportación, así como el inicio, finalización, fallo, cancelación o cierre de pantalla de la extracción; solo adjuntamos tipos predefinidos de herramienta, captura y fallo, y si el texto se reconoce de nuevo o se vuelve a abrir desde el almacenamiento, nunca identificadores de capturas, texto reconocido o editado, direcciones web ni mensajes de error.",
+        "html": "Cuando las estadísticas están activadas, también registramos el uso real de herramientas de anotación, división, unión de grabaciones y extracción de texto, independientemente de la exportación, así como el inicio, finalización, fallo, cancelación o cierre de pantalla de la extracción; solo adjuntamos tipos predefinidos de herramienta, captura y fallo, y si el texto se reconoce de nuevo o se vuelve a abrir desde el almacenamiento, nunca identificadores de capturas, texto reconocido o editado, direcciones web ni mensajes de error."
       },
       {
         "type": "bullet",
@@ -1699,7 +1709,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb191881a6bd7aebed9e66e2fd",
-    "updated_on": "2026-11-17"
+    "updated_on": "2026-11-18"
   },
   {
     "lang": "es",
@@ -1769,12 +1779,12 @@
     "source": "App/Resources/ja.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/ja/privacy/",
-    "source_text_sha256": "4a1dcfa1f394546bdf006dfd8d04a1c0b774250512a1a94646221d25b5437230",
+    "source_text_sha256": "750b5b045a3decdd84382ced863099743f030c3b43c273a9cbf9de7f8f3cc315",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "施行日: 2026年11月17日",
-        "html": "施行日: 2026年11月17日"
+        "text": "施行日: 2026年11月18日",
+        "html": "施行日: 2026年11月18日"
       },
       {
         "type": "paragraph",
@@ -1875,6 +1885,11 @@
         "type": "bullet",
         "text": "Google の分析ツールが自動で残す記録: 統計がオンのまま本アプリを初めて開いたとき、アプリを開いたときと使った時間、アプリと iOS のアップデート。App Store で購入した場合、このツールが商品 ID・価格・通貨・数量を含む購入の記録を自動で残すことがあります",
         "html": "Google の分析ツールが自動で残す記録: 統計がオンのまま本アプリを初めて開いたとき、アプリを開いたときと使った時間、アプリと iOS のアップデート。App Store で購入した場合、このツールが商品 ID・価格・通貨・数量を含む購入の記録を自動で残すことがあります"
+      },
+      {
+        "type": "bullet",
+        "text": "利用状況の統計がオンの場合、書き出しとは別に注釈ツール・分割・画面収録の結合・テキスト抽出を実際に使ったことと、テキスト抽出の開始・完了・失敗・キャンセル・画面終了を記録し、決められたツールの種類・キャプチャ方式・失敗の分類・新たな認識か保存した文字の再表示かだけを付け、キャプチャ識別子・認識した文字・編集した文字・URL・エラーメッセージは送りません。",
+        "html": "利用状況の統計がオンの場合、書き出しとは別に注釈ツール・分割・画面収録の結合・テキスト抽出を実際に使ったことと、テキスト抽出の開始・完了・失敗・キャンセル・画面終了を記録し、決められたツールの種類・キャプチャ方式・失敗の分類・新たな認識か保存した文字の再表示かだけを付け、キャプチャ識別子・認識した文字・編集した文字・URL・エラーメッセージは送りません。"
       },
       {
         "type": "bullet",
@@ -2663,7 +2678,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb191881dc8f13ce1ecac616c2",
-    "updated_on": "2026-11-17"
+    "updated_on": "2026-11-18"
   },
   {
     "lang": "ja",
@@ -2733,12 +2748,12 @@
     "source": "App/Resources/ko.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/ko/privacy/",
-    "source_text_sha256": "6883b28f576f2b9a20a22eb8b7d47b14b518536d68954cbff5b17b0d32cdce7b",
+    "source_text_sha256": "53c2fb3ae38aa8bdf94dcad89f29c61d4ed0d3ce884b0d51e9630fca4dc0ce1c",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "시행일: 2026년 11월 17일",
-        "html": "시행일: 2026년 11월 17일"
+        "text": "시행일: 2026년 11월 18일",
+        "html": "시행일: 2026년 11월 18일"
       },
       {
         "type": "paragraph",
@@ -2839,6 +2854,11 @@
         "type": "bullet",
         "text": "Google 의 분석 도구가 저절로 남기는 기록: 사용 통계가 켜진 채 앱을 처음 연 때, 그 뒤 앱을 연 때와 쓴 시간, 앱·iOS 업데이트. App Store 에서 구매하시면 이 도구가 상품 번호·가격·통화·수량이 담긴 구매 기록을 스스로 남길 수 있습니다",
         "html": "Google 의 분석 도구가 저절로 남기는 기록: 사용 통계가 켜진 채 앱을 처음 연 때, 그 뒤 앱을 연 때와 쓴 시간, 앱·iOS 업데이트. App Store 에서 구매하시면 이 도구가 상품 번호·가격·통화·수량이 담긴 구매 기록을 스스로 남길 수 있습니다"
+      },
+      {
+        "type": "bullet",
+        "text": "사용 통계가 켜져 있을 때는 내보내기 여부와 별도로 마크업 도구·분할·화면 기록 합성·텍스트 추출을 실제로 사용한 사실과 텍스트 추출의 시작·완료·실패·취소·화면 종료를 기록하며, 정해진 도구 종류·캡쳐 방식·실패 분류·새 인식인지 저장된 글 열기인지만 붙이고 캡쳐 식별자·인식한 글·수정한 글·주소·오류 안내 글은 보내지 않습니다.",
+        "html": "사용 통계가 켜져 있을 때는 내보내기 여부와 별도로 마크업 도구·분할·화면 기록 합성·텍스트 추출을 실제로 사용한 사실과 텍스트 추출의 시작·완료·실패·취소·화면 종료를 기록하며, 정해진 도구 종류·캡쳐 방식·실패 분류·새 인식인지 저장된 글 열기인지만 붙이고 캡쳐 식별자·인식한 글·수정한 글·주소·오류 안내 글은 보내지 않습니다."
       },
       {
         "type": "bullet",
@@ -3527,7 +3547,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb19188136b784d8dc15381d94",
-    "updated_on": "2026-11-17"
+    "updated_on": "2026-11-18"
   },
   {
     "lang": "ko",
@@ -3597,12 +3617,12 @@
     "source": "App/Resources/zh-Hans.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/zh-Hans/privacy/",
-    "source_text_sha256": "58042f45068836143223780cb16967bbb455d832031d0bcab420b72ecdc35047",
+    "source_text_sha256": "d30f780297ec9c484c09185dcec3844374f005cda92891e94f8fcbd0fa4aefe9",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "生效日期：2026年11月17日",
-        "html": "生效日期：2026年11月17日"
+        "text": "生效日期：2026年11月18日",
+        "html": "生效日期：2026年11月18日"
       },
       {
         "type": "paragraph",
@@ -3703,6 +3723,11 @@
         "type": "bullet",
         "text": "Google 分析工具自动留下的记录：在使用统计开启的状态下首次打开 App 的时间、打开 App 的时间和使用时长、App 与 iOS 的更新。如果你在 App Store 购买，该工具可能会自动留下包含产品编号、价格、币种和数量的购买记录",
         "html": "Google 分析工具自动留下的记录：在使用统计开启的状态下首次打开 App 的时间、打开 App 的时间和使用时长、App 与 iOS 的更新。如果你在 App Store 购买，该工具可能会自动留下包含产品编号、价格、币种和数量的购买记录"
+      },
+      {
+        "type": "bullet",
+        "text": "开启使用统计时，我们还会独立于导出记录标注工具、分割、屏幕录制拼接和文字提取的实际使用情况，以及文字提取的开始、完成、失败、取消或关闭界面；只附带预设的工具类型、截取方式、失败分类，以及是重新识别还是打开已保存的文字，不发送截取标识符、识别或编辑的文字、网址或错误消息。",
+        "html": "开启使用统计时，我们还会独立于导出记录标注工具、分割、屏幕录制拼接和文字提取的实际使用情况，以及文字提取的开始、完成、失败、取消或关闭界面；只附带预设的工具类型、截取方式、失败分类，以及是重新识别还是打开已保存的文字，不发送截取标识符、识别或编辑的文字、网址或错误消息。"
       },
       {
         "type": "bullet",
@@ -4401,7 +4426,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb1918813dbaffc9d29c39e459",
-    "updated_on": "2026-11-17"
+    "updated_on": "2026-11-18"
   },
   {
     "lang": "zh-Hans",
@@ -4471,12 +4496,12 @@
     "source": "App/Resources/zh-Hant.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/zh-Hant/privacy/",
-    "source_text_sha256": "2b9ca42437442bf472d882ce96063a16e366c7c5ee531315686e37dea0c0300a",
+    "source_text_sha256": "2b9305ad523ef895337b0f8b1ebb35610be69a0ab29750b880092a2e2f16bf0e",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "生效日期：2026年11月17日",
-        "html": "生效日期：2026年11月17日"
+        "text": "生效日期：2026年11月18日",
+        "html": "生效日期：2026年11月18日"
       },
       {
         "type": "paragraph",
@@ -4577,6 +4602,11 @@
         "type": "bullet",
         "text": "Google 分析工具自動留下的記錄：在使用統計開啟的狀態下第一次開啟 App 的時間、開啟 App 的時間與使用時長、App 與 iOS 的更新。如果您在 App Store 購買，該工具可能會自動留下包含產品編號、價格、幣別與數量的購買記錄",
         "html": "Google 分析工具自動留下的記錄：在使用統計開啟的狀態下第一次開啟 App 的時間、開啟 App 的時間與使用時長、App 與 iOS 的更新。如果您在 App Store 購買，該工具可能會自動留下包含產品編號、價格、幣別與數量的購買記錄"
+      },
+      {
+        "type": "bullet",
+        "text": "開啟使用統計時，我們也會獨立於輸出記錄標註工具、分割、螢幕錄影拼接與文字提取的實際使用情況，以及文字提取的開始、完成、失敗、取消或關閉畫面；只附帶預設的工具類型、截取方式、失敗分類，以及是重新辨識還是開啟已儲存的文字，不傳送截取識別碼、辨識或編輯的文字、網址或錯誤訊息。",
+        "html": "開啟使用統計時，我們也會獨立於輸出記錄標註工具、分割、螢幕錄影拼接與文字提取的實際使用情況，以及文字提取的開始、完成、失敗、取消或關閉畫面；只附帶預設的工具類型、截取方式、失敗分類，以及是重新辨識還是開啟已儲存的文字，不傳送截取識別碼、辨識或編輯的文字、網址或錯誤訊息。"
       },
       {
         "type": "bullet",
@@ -5270,7 +5300,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb1918816cacd7e6dbd45f4c81",
-    "updated_on": "2026-11-17"
+    "updated_on": "2026-11-18"
   },
   {
     "lang": "zh-Hant",

@@ -6,17 +6,22 @@
     "source": "App/Resources/en.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/privacy/",
-    "source_text_sha256": "d2282fc92349fd57bca99d9cd4193ab8e5e4647f440b4f03d5a3e891d41c2291",
+    "source_text_sha256": "a08abf36293a452aaf0822abab0945374925ac53f68bb2c4a5b3655d2beaed61",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Effective date: November 16, 2026",
-        "html": "Effective date: November 16, 2026"
+        "text": "Effective date: November 17, 2026",
+        "html": "Effective date: November 17, 2026"
       },
       {
         "type": "paragraph",
-        "text": "What changed (previous version effective November 11, 2026): we added rewarded ads (Google AdMob). Only if you tap \"Watch Ad to Export\" after using up your free trials does Google, which shows the ad, receive information about your device; nothing is sent for ads before you tap. Usage statistics collection is paused while you watch an ad. The cause attached to a failed capture in usage statistics is now more detailed (the stage, the kind of error and its code). Settings now has a \"Report an Ad\" email. And we changed how we tell you about changes to what is sent: we first update this policy and say so in the app's update notes (Sections 1–9 and 12).",
-        "html": "What changed (previous version effective November 11, 2026): we added rewarded ads (Google AdMob). Only if you tap &quot;Watch Ad to Export&quot; after using up your free trials does Google, which shows the ad, receive information about your device; nothing is sent for ads before you tap. Usage statistics collection is paused while you watch an ad. The cause attached to a failed capture in usage statistics is now more detailed (the stage, the kind of error and its code). Settings now has a &quot;Report an Ad&quot; email. And we changed how we tell you about changes to what is sent: we first update this policy and say so in the app&#x27;s update notes (Sections 1–9 and 12)."
+        "text": "What changed (previous version effective November 11, 2026): we added rewarded ads (Google AdMob). Only if you tap \"Watch Ad to Export\" after using up your free trials does Google, which shows the ad, receive information about your device; nothing is sent for ads before you tap. Usage statistics collection is paused while you watch an ad. The cause attached to a failed capture in usage statistics is now more detailed (the stage, the kind of error and its code). Settings now has a \"Report a problem\" email. And we changed how we tell you about changes to what is sent: we first update this policy and say so in the app's update notes (Sections 1–9 and 12).",
+        "html": "What changed (previous version effective November 11, 2026): we added rewarded ads (Google AdMob). Only if you tap &quot;Watch Ad to Export&quot; after using up your free trials does Google, which shows the ad, receive information about your device; nothing is sent for ads before you tap. Usage statistics collection is paused while you watch an ad. The cause attached to a failed capture in usage statistics is now more detailed (the stage, the kind of error and its code). Settings now has a &quot;Report a problem&quot; email. And we changed how we tell you about changes to what is sent: we first update this policy and say so in the app&#x27;s update notes (Sections 1–9 and 12)."
+      },
+      {
+        "type": "paragraph",
+        "text": "Text extraction runs on your device. Text you request to extract and edits to that text are saved beside the capture and excluded from device backups. Deleting the capture deletes the text; changing image edits such as masks or crops discards the previous text before extraction. Text is not sent in analytics or ad requests. Text you choose to copy or share may be sent to your chosen destination. Capture-level trial use is recorded in device preferences; ad-earned text access is saved beside the capture. The advertising terms below also apply when you choose “Watch Ad to Extract”, with the same regional, tracking-permission and transmitted-data conditions. Its reward is text-extraction access for that capture, reusable after recognition fails or the app restarts.",
+        "html": "Text extraction runs on your device. Text you request to extract and edits to that text are saved beside the capture and excluded from device backups. Deleting the capture deletes the text; changing image edits such as masks or crops discards the previous text before extraction. Text is not sent in analytics or ad requests. Text you choose to copy or share may be sent to your chosen destination. Capture-level trial use is recorded in device preferences; ad-earned text access is saved beside the capture. The advertising terms below also apply when you choose “Watch Ad to Extract”, with the same regional, tracking-permission and transmitted-data conditions. Its reward is text-extraction access for that capture, reusable after recognition fails or the app restarts."
       },
       {
         "type": "paragraph",
@@ -60,8 +65,8 @@
       },
       {
         "type": "bullet",
-        "text": "The editing state you leave behind with \"Save\" in the editor. Only the kind and position of each hidden box, whether it is hidden, the annotations, and the crop and split settings are kept in a file beside the item. Recognized text is never saved. Deleting the item deletes them too",
-        "html": "The editing state you leave behind with &quot;Save&quot; in the editor. Only the kind and position of each hidden box, whether it is hidden, the annotations, and the crop and split settings are kept in a file beside the item. <strong>Recognized text is never saved.</strong> Deleting the item deletes them too"
+        "text": "The editing state you leave behind with \"Save\" in the editor. Only the kind and position of each hidden box, whether it is hidden, the annotations, and the crop and split settings are kept in a file beside the item. Text recognized for automatic masking is never saved. Deleting the item deletes them too",
+        "html": "The editing state you leave behind with &quot;Save&quot; in the editor. Only the kind and position of each hidden box, whether it is hidden, the annotations, and the crop and split settings are kept in a file beside the item. <strong>Text recognized for automatic masking is never saved.</strong> Deleting the item deletes them too"
       },
       {
         "type": "bullet",
@@ -810,7 +815,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb191881098a30db9620d9de74",
-    "updated_on": "2026-11-16"
+    "updated_on": "2026-11-17"
   },
   {
     "lang": "en",
@@ -880,17 +885,22 @@
     "source": "App/Resources/es.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/es/privacy/",
-    "source_text_sha256": "62ec6ca5d24f8d355d8c9e97f6eb333e1a04896c9fad99694dc945b9fe08210e",
+    "source_text_sha256": "0a10a3065e455ea4bcc542a510dd26be0352d1adbec951708f2e39765eaa7847",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Fecha de entrada en vigor: 16 de noviembre de 2026",
-        "html": "Fecha de entrada en vigor: 16 de noviembre de 2026"
+        "text": "Fecha de entrada en vigor: 17 de noviembre de 2026",
+        "html": "Fecha de entrada en vigor: 17 de noviembre de 2026"
       },
       {
         "type": "paragraph",
-        "text": "Qué ha cambiado (versión anterior en vigor desde el 11 de noviembre de 2026): añadimos anuncios con recompensa (Google AdMob). Solo si tocas “Ver anuncio y exportar” después de agotar tus pruebas gratuitas, Google, que muestra el anuncio, recibe información de tu dispositivo; antes de que toques no se envía nada para los anuncios. La recogida de estadísticas de uso se detiene mientras ves un anuncio. La causa que se adjunta en las estadísticas de uso a una captura fallida es ahora más detallada (la fase, el tipo de error y su código). Ajustes tiene ahora un correo “Informar de un anuncio”. Y hemos cambiado cómo te avisamos de los cambios en lo que se envía: primero actualizamos esta política y lo indicamos en las notas de actualización de la app (apartados 1 a 9 y 12).",
-        "html": "Qué ha cambiado (versión anterior en vigor desde el 11 de noviembre de 2026): añadimos anuncios con recompensa (Google AdMob). Solo si tocas “Ver anuncio y exportar” después de agotar tus pruebas gratuitas, Google, que muestra el anuncio, recibe información de tu dispositivo; antes de que toques no se envía nada para los anuncios. La recogida de estadísticas de uso se detiene mientras ves un anuncio. La causa que se adjunta en las estadísticas de uso a una captura fallida es ahora más detallada (la fase, el tipo de error y su código). Ajustes tiene ahora un correo “Informar de un anuncio”. Y hemos cambiado cómo te avisamos de los cambios en lo que se envía: primero actualizamos esta política y lo indicamos en las notas de actualización de la app (apartados 1 a 9 y 12)."
+        "text": "Qué ha cambiado (versión anterior en vigor desde el 11 de noviembre de 2026): añadimos anuncios con recompensa (Google AdMob). Solo si tocas “Ver anuncio y exportar” después de agotar tus pruebas gratuitas, Google, que muestra el anuncio, recibe información de tu dispositivo; antes de que toques no se envía nada para los anuncios. La recogida de estadísticas de uso se detiene mientras ves un anuncio. La causa que se adjunta en las estadísticas de uso a una captura fallida es ahora más detallada (la fase, el tipo de error y su código). Ajustes tiene ahora un correo “Informar de un problema”. Y hemos cambiado cómo te avisamos de los cambios en lo que se envía: primero actualizamos esta política y lo indicamos en las notas de actualización de la app (apartados 1 a 9 y 12).",
+        "html": "Qué ha cambiado (versión anterior en vigor desde el 11 de noviembre de 2026): añadimos anuncios con recompensa (Google AdMob). Solo si tocas “Ver anuncio y exportar” después de agotar tus pruebas gratuitas, Google, que muestra el anuncio, recibe información de tu dispositivo; antes de que toques no se envía nada para los anuncios. La recogida de estadísticas de uso se detiene mientras ves un anuncio. La causa que se adjunta en las estadísticas de uso a una captura fallida es ahora más detallada (la fase, el tipo de error y su código). Ajustes tiene ahora un correo “Informar de un problema”. Y hemos cambiado cómo te avisamos de los cambios en lo que se envía: primero actualizamos esta política y lo indicamos en las notas de actualización de la app (apartados 1 a 9 y 12)."
+      },
+      {
+        "type": "paragraph",
+        "text": "La extracción de texto se realiza en tu dispositivo. El texto que solicitas extraer y sus modificaciones se guardan junto a la captura y se excluyen de las copias de seguridad. Al borrar la captura se borra el texto; al cambiar las zonas ocultas, el recorte u otras ediciones de imagen, se descarta el texto anterior. No se envía texto en estadísticas ni solicitudes de anuncios. El texto que copies o compartas puede enviarse al destino que elijas. El uso de prueba por captura queda en las preferencias del dispositivo; el acceso a texto obtenido por anuncio se guarda junto a la captura. Las condiciones de publicidad siguientes también se aplican a “Ver anuncio y extraer”, con las mismas condiciones regionales, de permiso de rastreo y de datos transmitidos. La recompensa es el acceso a extraer texto de esa captura, incluso tras un fallo de reconocimiento o al reiniciar la app.",
+        "html": "La extracción de texto se realiza en tu dispositivo. El texto que solicitas extraer y sus modificaciones se guardan junto a la captura y se excluyen de las copias de seguridad. Al borrar la captura se borra el texto; al cambiar las zonas ocultas, el recorte u otras ediciones de imagen, se descarta el texto anterior. No se envía texto en estadísticas ni solicitudes de anuncios. El texto que copies o compartas puede enviarse al destino que elijas. El uso de prueba por captura queda en las preferencias del dispositivo; el acceso a texto obtenido por anuncio se guarda junto a la captura. Las condiciones de publicidad siguientes también se aplican a “Ver anuncio y extraer”, con las mismas condiciones regionales, de permiso de rastreo y de datos transmitidos. La recompensa es el acceso a extraer texto de esa captura, incluso tras un fallo de reconocimiento o al reiniciar la app."
       },
       {
         "type": "paragraph",
@@ -934,8 +944,8 @@
       },
       {
         "type": "bullet",
-        "text": "El estado de edición con el que sales del editor al tocar “Guardar”. En un archivo junto al elemento solo quedan el tipo y la posición de cada recuadro, si está oculto o no, las anotaciones y los ajustes de recorte y división. El texto reconocido nunca se guarda. Al eliminar el elemento, también se eliminan",
-        "html": "El estado de edición con el que sales del editor al tocar “Guardar”. En un archivo junto al elemento solo quedan el tipo y la posición de cada recuadro, si está oculto o no, las anotaciones y los ajustes de recorte y división. <strong>El texto reconocido nunca se guarda.</strong> Al eliminar el elemento, también se eliminan"
+        "text": "El estado de edición con el que sales del editor al tocar “Guardar”. En un archivo junto al elemento solo quedan el tipo y la posición de cada recuadro, si está oculto o no, las anotaciones y los ajustes de recorte y división. El texto reconocido para ocultar información automáticamente no se guarda. Al eliminar el elemento, también se eliminan",
+        "html": "El estado de edición con el que sales del editor al tocar “Guardar”. En un archivo junto al elemento solo quedan el tipo y la posición de cada recuadro, si está oculto o no, las anotaciones y los ajustes de recorte y división. <strong>El texto reconocido para ocultar información automáticamente no se guarda.</strong> Al eliminar el elemento, también se eliminan"
       },
       {
         "type": "bullet",
@@ -1689,7 +1699,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb191881a6bd7aebed9e66e2fd",
-    "updated_on": "2026-11-16"
+    "updated_on": "2026-11-17"
   },
   {
     "lang": "es",
@@ -1759,17 +1769,22 @@
     "source": "App/Resources/ja.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/ja/privacy/",
-    "source_text_sha256": "42baebcf3875ea2b03e4f34f254a0a6dc525ceadf7b724fb203fe84feb4b25ba",
+    "source_text_sha256": "4a1dcfa1f394546bdf006dfd8d04a1c0b774250512a1a94646221d25b5437230",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "施行日: 2026年11月16日",
-        "html": "施行日: 2026年11月16日"
+        "text": "施行日: 2026年11月17日",
+        "html": "施行日: 2026年11月17日"
       },
       {
         "type": "paragraph",
-        "text": "変更内容（前の版の施行日 2026年11月11日）: リワード広告（Google AdMob）を追加しました。無料体験を使い切ったあとに「広告を見て書き出す」を押した場合にだけ、広告を表示する Google が端末の情報を受け取ります。押す前には広告のために何も送りません。広告を見ている間は、利用状況の統計の収集を止めます。利用状況の統計でキャプチャの失敗に付ける原因を、より詳しくしました（どの段階か、エラーの種類とそのコード）。設定に「広告を報告」のメールを加えました。また、送る情報が変わるときのお知らせ方法を変えました。先にこのポリシーを更新し、アプリのアップデート情報に記載します（第 1〜9 項と第 12 項）。",
-        "html": "変更内容（前の版の施行日 2026年11月11日）: リワード広告（Google AdMob）を追加しました。無料体験を使い切ったあとに「広告を見て書き出す」を押した場合にだけ、広告を表示する Google が端末の情報を受け取ります。押す前には広告のために何も送りません。広告を見ている間は、利用状況の統計の収集を止めます。利用状況の統計でキャプチャの失敗に付ける原因を、より詳しくしました（どの段階か、エラーの種類とそのコード）。設定に「広告を報告」のメールを加えました。また、送る情報が変わるときのお知らせ方法を変えました。先にこのポリシーを更新し、アプリのアップデート情報に記載します（第 1〜9 項と第 12 項）。"
+        "text": "変更内容（前の版の施行日 2026年11月11日）: リワード広告（Google AdMob）を追加しました。無料体験を使い切ったあとに「広告を見て書き出す」を押した場合にだけ、広告を表示する Google が端末の情報を受け取ります。押す前には広告のために何も送りません。広告を見ている間は、利用状況の統計の収集を止めます。利用状況の統計でキャプチャの失敗に付ける原因を、より詳しくしました（どの段階か、エラーの種類とそのコード）。設定に「問題を報告」のメールを加えました。また、送る情報が変わるときのお知らせ方法を変えました。先にこのポリシーを更新し、アプリのアップデート情報に記載します（第 1〜9 項と第 12 項）。",
+        "html": "変更内容（前の版の施行日 2026年11月11日）: リワード広告（Google AdMob）を追加しました。無料体験を使い切ったあとに「広告を見て書き出す」を押した場合にだけ、広告を表示する Google が端末の情報を受け取ります。押す前には広告のために何も送りません。広告を見ている間は、利用状況の統計の収集を止めます。利用状況の統計でキャプチャの失敗に付ける原因を、より詳しくしました（どの段階か、エラーの種類とそのコード）。設定に「問題を報告」のメールを加えました。また、送る情報が変わるときのお知らせ方法を変えました。先にこのポリシーを更新し、アプリのアップデート情報に記載します（第 1〜9 項と第 12 項）。"
+      },
+      {
+        "type": "paragraph",
+        "text": "テキスト抽出はデバイス内で行います。ユーザーが抽出を依頼した文字とその編集内容はキャプチャの隣に保存し、端末のバックアップから除外します。キャプチャの削除時に一緒に削除し、マスキング・切り取りなどの画像編集が変わると以前の文字を破棄して再抽出します。文字を使用統計や広告リクエストに送信しません。ユーザーがコピー・共有した文字は選んだ宛先に渡る場合があります。キャプチャ単位の体験利用は端末の設定領域に、広告で得たテキスト抽出の利用権はキャプチャの隣に保存します。以下の広告に関する説明は「広告を見て抽出」にも、同じ地域・追跡許可・送信情報の条件で適用されます。この場合の報酬はそのキャプチャのテキスト抽出権であり、認識失敗やアプリの再起動後も利用できます。",
+        "html": "テキスト抽出はデバイス内で行います。ユーザーが抽出を依頼した文字とその編集内容はキャプチャの隣に保存し、端末のバックアップから除外します。キャプチャの削除時に一緒に削除し、マスキング・切り取りなどの画像編集が変わると以前の文字を破棄して再抽出します。文字を使用統計や広告リクエストに送信しません。ユーザーがコピー・共有した文字は選んだ宛先に渡る場合があります。キャプチャ単位の体験利用は端末の設定領域に、広告で得たテキスト抽出の利用権はキャプチャの隣に保存します。以下の広告に関する説明は「広告を見て抽出」にも、同じ地域・追跡許可・送信情報の条件で適用されます。この場合の報酬はそのキャプチャのテキスト抽出権であり、認識失敗やアプリの再起動後も利用できます。"
       },
       {
         "type": "paragraph",
@@ -1813,8 +1828,8 @@
       },
       {
         "type": "bullet",
-        "text": "エディタで「保存」して抜けたときの編集状態。隠す枠の種類・位置・隠しているかどうか、注釈、切り取り・分割の設定だけが項目の隣のファイルに残ります。認識した文字は保存しません。項目を削除すると一緒に消えます",
-        "html": "エディタで「保存」して抜けたときの編集状態。隠す枠の種類・位置・隠しているかどうか、注釈、切り取り・分割の設定だけが項目の隣のファイルに残ります。<strong>認識した文字は保存しません</strong>。項目を削除すると一緒に消えます"
+        "text": "エディタで「保存」して抜けたときの編集状態。隠す枠の種類・位置・隠しているかどうか、注釈、切り取り・分割の設定だけが項目の隣のファイルに残ります。自動マスキングのために認識した文字は保存しません。項目を削除すると一緒に消えます",
+        "html": "エディタで「保存」して抜けたときの編集状態。隠す枠の種類・位置・隠しているかどうか、注釈、切り取り・分割の設定だけが項目の隣のファイルに残ります。<strong>自動マスキングのために認識した文字は保存しません</strong>。項目を削除すると一緒に消えます"
       },
       {
         "type": "bullet",
@@ -2648,7 +2663,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb191881dc8f13ce1ecac616c2",
-    "updated_on": "2026-11-16"
+    "updated_on": "2026-11-17"
   },
   {
     "lang": "ja",
@@ -2718,17 +2733,22 @@
     "source": "App/Resources/ko.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/ko/privacy/",
-    "source_text_sha256": "d205c82ef16b05c1746688164e1c8be693465052adcf8fe78fd267b0814094f2",
+    "source_text_sha256": "6883b28f576f2b9a20a22eb8b7d47b14b518536d68954cbff5b17b0d32cdce7b",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "시행일: 2026년 11월 16일",
-        "html": "시행일: 2026년 11월 16일"
+        "text": "시행일: 2026년 11월 17일",
+        "html": "시행일: 2026년 11월 17일"
       },
       {
         "type": "paragraph",
-        "text": "바뀐 내용(이전 판 시행일 2026년 11월 11일): 보상형 광고(Google AdMob)를 더했습니다. 무료 체험을 다 쓴 뒤 \"광고 보고 내보내기\" 를 누르신 경우에만 광고를 보여 주는 Google 이 기기 정보를 받으며, 누르기 전에는 광고 쪽으로 아무것도 보내지 않습니다. 광고를 보시는 동안에는 사용 통계 수집을 멈춥니다. 캡쳐가 실패했을 때 사용 통계에 붙이는 원인을 더 자세히 했습니다(단계·오류 종류와 번호). 설정에 \"광고 신고\" 메일을 더했습니다. 보내는 것이 바뀔 때 알리는 방법을 \"방침을 먼저 고치고 앱 업데이트 안내에 적는 것\" 으로 고쳤습니다(§1·§2·§3·§4·§5·§6·§7·§8·§9·§12).",
-        "html": "바뀐 내용(이전 판 시행일 2026년 11월 11일): 보상형 광고(Google AdMob)를 더했습니다. 무료 체험을 다 쓴 뒤 &quot;광고 보고 내보내기&quot; 를 누르신 경우에만 광고를 보여 주는 Google 이 기기 정보를 받으며, 누르기 전에는 광고 쪽으로 아무것도 보내지 않습니다. 광고를 보시는 동안에는 사용 통계 수집을 멈춥니다. 캡쳐가 실패했을 때 사용 통계에 붙이는 원인을 더 자세히 했습니다(단계·오류 종류와 번호). 설정에 &quot;광고 신고&quot; 메일을 더했습니다. 보내는 것이 바뀔 때 알리는 방법을 &quot;방침을 먼저 고치고 앱 업데이트 안내에 적는 것&quot; 으로 고쳤습니다(§1·§2·§3·§4·§5·§6·§7·§8·§9·§12)."
+        "text": "바뀐 내용(이전 판 시행일 2026년 11월 11일): 보상형 광고(Google AdMob)를 더했습니다. 무료 체험을 다 쓴 뒤 \"광고 보고 내보내기\" 를 누르신 경우에만 광고를 보여 주는 Google 이 기기 정보를 받으며, 누르기 전에는 광고 쪽으로 아무것도 보내지 않습니다. 광고를 보시는 동안에는 사용 통계 수집을 멈춥니다. 캡쳐가 실패했을 때 사용 통계에 붙이는 원인을 더 자세히 했습니다(단계·오류 종류와 번호). 설정에 \"문제 신고\" 메일을 더했습니다. 보내는 것이 바뀔 때 알리는 방법을 \"방침을 먼저 고치고 앱 업데이트 안내에 적는 것\" 으로 고쳤습니다(§1·§2·§3·§4·§5·§6·§7·§8·§9·§12).",
+        "html": "바뀐 내용(이전 판 시행일 2026년 11월 11일): 보상형 광고(Google AdMob)를 더했습니다. 무료 체험을 다 쓴 뒤 &quot;광고 보고 내보내기&quot; 를 누르신 경우에만 광고를 보여 주는 Google 이 기기 정보를 받으며, 누르기 전에는 광고 쪽으로 아무것도 보내지 않습니다. 광고를 보시는 동안에는 사용 통계 수집을 멈춥니다. 캡쳐가 실패했을 때 사용 통계에 붙이는 원인을 더 자세히 했습니다(단계·오류 종류와 번호). 설정에 &quot;문제 신고&quot; 메일을 더했습니다. 보내는 것이 바뀔 때 알리는 방법을 &quot;방침을 먼저 고치고 앱 업데이트 안내에 적는 것&quot; 으로 고쳤습니다(§1·§2·§3·§4·§5·§6·§7·§8·§9·§12)."
+      },
+      {
+        "type": "paragraph",
+        "text": "텍스트 추출은 기기 안에서 처리합니다. 사용자가 요청해 추출한 글과 수정한 글은 캡쳐 옆 파일에 저장하며 기기 백업에서 제외합니다. 캡쳐를 지우면 함께 지우고, 가림·자르기 등 이미지 편집이 바뀌면 이전 글을 버리고 다시 추출합니다. 글은 사용 통계나 광고 요청에 보내지 않습니다. 사용자가 복사·공유한 글은 선택한 목적지로 전달될 수 있습니다. 캡쳐별 체험 사용 여부는 기기 설정 저장소에, 광고로 받은 텍스트 추출 권한은 해당 캡쳐 옆에 저장합니다. 아래의 광고 설명은 사용자가 선택한 “광고 보고 추출”에도 같은 지역·추적 허용·전송 정보 조건으로 적용됩니다. 이때 보상은 해당 캡쳐의 텍스트 추출 권한이며, 글자 인식 실패·앱 재실행 뒤에도 다시 사용할 수 있습니다.",
+        "html": "텍스트 추출은 기기 안에서 처리합니다. 사용자가 요청해 추출한 글과 수정한 글은 캡쳐 옆 파일에 저장하며 기기 백업에서 제외합니다. 캡쳐를 지우면 함께 지우고, 가림·자르기 등 이미지 편집이 바뀌면 이전 글을 버리고 다시 추출합니다. 글은 사용 통계나 광고 요청에 보내지 않습니다. 사용자가 복사·공유한 글은 선택한 목적지로 전달될 수 있습니다. 캡쳐별 체험 사용 여부는 기기 설정 저장소에, 광고로 받은 텍스트 추출 권한은 해당 캡쳐 옆에 저장합니다. 아래의 광고 설명은 사용자가 선택한 “광고 보고 추출”에도 같은 지역·추적 허용·전송 정보 조건으로 적용됩니다. 이때 보상은 해당 캡쳐의 텍스트 추출 권한이며, 글자 인식 실패·앱 재실행 뒤에도 다시 사용할 수 있습니다."
       },
       {
         "type": "paragraph",
@@ -2772,8 +2792,8 @@
       },
       {
         "type": "bullet",
-        "text": "편집기에서 \"저장\" 으로 나간 편집 상태. 가림 칸의 종류·위치·가림 여부, 마크업, 자르기·분할 설정만 항목 옆 파일에 남습니다. 인식한 글자는 저장하지 않습니다. 항목을 지우면 함께 지워집니다",
-        "html": "편집기에서 &quot;저장&quot; 으로 나간 편집 상태. 가림 칸의 종류·위치·가림 여부, 마크업, 자르기·분할 설정만 항목 옆 파일에 남습니다. <strong>인식한 글자는 저장하지 않습니다.</strong> 항목을 지우면 함께 지워집니다"
+        "text": "편집기에서 \"저장\" 으로 나간 편집 상태. 가림 칸의 종류·위치·가림 여부, 마크업, 자르기·분할 설정만 항목 옆 파일에 남습니다. 자동 가림을 위해 인식한 글자는 저장하지 않습니다. 항목을 지우면 함께 지워집니다",
+        "html": "편집기에서 &quot;저장&quot; 으로 나간 편집 상태. 가림 칸의 종류·위치·가림 여부, 마크업, 자르기·분할 설정만 항목 옆 파일에 남습니다. <strong>자동 가림을 위해 인식한 글자는 저장하지 않습니다.</strong> 항목을 지우면 함께 지워집니다"
       },
       {
         "type": "bullet",
@@ -3507,7 +3527,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb19188136b784d8dc15381d94",
-    "updated_on": "2026-11-16"
+    "updated_on": "2026-11-17"
   },
   {
     "lang": "ko",
@@ -3577,17 +3597,22 @@
     "source": "App/Resources/zh-Hans.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/zh-Hans/privacy/",
-    "source_text_sha256": "198ed276a54c7762aff4c6389eff226e29334de99b63b2bdf8cb73c8f1a5c5d8",
+    "source_text_sha256": "58042f45068836143223780cb16967bbb455d832031d0bcab420b72ecdc35047",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "生效日期：2026年11月16日",
-        "html": "生效日期：2026年11月16日"
+        "text": "生效日期：2026年11月17日",
+        "html": "生效日期：2026年11月17日"
       },
       {
         "type": "paragraph",
-        "text": "变更内容（上一版生效日期 2026年11月11日）：新增了激励广告（Google AdMob）。只有在你用完免费试用后点按“观看广告并导出”时，展示广告的 Google 才会收到设备信息；点按之前不会为广告发送任何内容。观看广告期间，会暂停收集使用统计。使用统计中附在截取失败上的原因更详细了（所处阶段、错误的种类及其代码）。设置中新增了“举报广告”邮件。同时，我们改变了告知发送内容变化的方式：先更新本政策，并在 App 的更新说明中写明（第 1 至 9 条和第 12 条）。",
-        "html": "变更内容（上一版生效日期 2026年11月11日）：新增了激励广告（Google AdMob）。只有在你用完免费试用后点按“观看广告并导出”时，展示广告的 Google 才会收到设备信息；点按之前不会为广告发送任何内容。观看广告期间，会暂停收集使用统计。使用统计中附在截取失败上的原因更详细了（所处阶段、错误的种类及其代码）。设置中新增了“举报广告”邮件。同时，我们改变了告知发送内容变化的方式：先更新本政策，并在 App 的更新说明中写明（第 1 至 9 条和第 12 条）。"
+        "text": "变更内容（上一版生效日期 2026年11月11日）：新增了激励广告（Google AdMob）。只有在你用完免费试用后点按“观看广告并导出”时，展示广告的 Google 才会收到设备信息；点按之前不会为广告发送任何内容。观看广告期间，会暂停收集使用统计。使用统计中附在截取失败上的原因更详细了（所处阶段、错误的种类及其代码）。设置中新增了“报告问题”邮件。同时，我们改变了告知发送内容变化的方式：先更新本政策，并在 App 的更新说明中写明（第 1 至 9 条和第 12 条）。",
+        "html": "变更内容（上一版生效日期 2026年11月11日）：新增了激励广告（Google AdMob）。只有在你用完免费试用后点按“观看广告并导出”时，展示广告的 Google 才会收到设备信息；点按之前不会为广告发送任何内容。观看广告期间，会暂停收集使用统计。使用统计中附在截取失败上的原因更详细了（所处阶段、错误的种类及其代码）。设置中新增了“报告问题”邮件。同时，我们改变了告知发送内容变化的方式：先更新本政策，并在 App 的更新说明中写明（第 1 至 9 条和第 12 条）。"
+      },
+      {
+        "type": "paragraph",
+        "text": "文字提取在设备上进行。你主动提取的文字及其修改内容保存在截图旁的文件中，不纳入设备备份。删除截图时一并删除文字；修改遮挡、裁剪等图片编辑后，会丢弃旧文字并重新提取。文字不会发送到使用统计或广告请求中。你选择复制或分享的文字可能被发送到所选目的地。每张截图的体验使用记录保存在设备偏好设置中，观看广告获得的文字提取权限保存在截图旁。下述广告说明也适用于你主动选择的“观看广告后提取”，地区、跟踪授权和传输信息条件相同。其奖励为该截图的文字提取权限，在识别失败或重启App后仍可使用。",
+        "html": "文字提取在设备上进行。你主动提取的文字及其修改内容保存在截图旁的文件中，不纳入设备备份。删除截图时一并删除文字；修改遮挡、裁剪等图片编辑后，会丢弃旧文字并重新提取。文字不会发送到使用统计或广告请求中。你选择复制或分享的文字可能被发送到所选目的地。每张截图的体验使用记录保存在设备偏好设置中，观看广告获得的文字提取权限保存在截图旁。下述广告说明也适用于你主动选择的“观看广告后提取”，地区、跟踪授权和传输信息条件相同。其奖励为该截图的文字提取权限，在识别失败或重启App后仍可使用。"
       },
       {
         "type": "paragraph",
@@ -3631,8 +3656,8 @@
       },
       {
         "type": "bullet",
-        "text": "在编辑器中点按“存储”退出时的编辑状态。仅将遮挡框的类型、位置、是否遮挡，以及标注、裁剪与分割设置保存在项目旁边的文件中。识别出的文字不会被保存。删除项目时会一并删除",
-        "html": "在编辑器中点按“存储”退出时的编辑状态。仅将遮挡框的类型、位置、是否遮挡，以及标注、裁剪与分割设置保存在项目旁边的文件中。<strong>识别出的文字不会被保存</strong>。删除项目时会一并删除"
+        "text": "在编辑器中点按“存储”退出时的编辑状态。仅将遮挡框的类型、位置、是否遮挡，以及标注、裁剪与分割设置保存在项目旁边的文件中。用于自动遮挡而识别的文字不会被保存。删除项目时会一并删除",
+        "html": "在编辑器中点按“存储”退出时的编辑状态。仅将遮挡框的类型、位置、是否遮挡，以及标注、裁剪与分割设置保存在项目旁边的文件中。<strong>用于自动遮挡而识别的文字不会被保存</strong>。删除项目时会一并删除"
       },
       {
         "type": "bullet",
@@ -4376,7 +4401,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb1918813dbaffc9d29c39e459",
-    "updated_on": "2026-11-16"
+    "updated_on": "2026-11-17"
   },
   {
     "lang": "zh-Hans",
@@ -4446,17 +4471,22 @@
     "source": "App/Resources/zh-Hant.lproj/PrivacyPolicy.md",
     "captured_on": "2026-11-15",
     "path": "/tongcap/zh-Hant/privacy/",
-    "source_text_sha256": "0b65cc77e928bab0f924ddbc224e22e07e01a6b360996753424f6d747c0747a9",
+    "source_text_sha256": "2b9ca42437442bf472d882ce96063a16e366c7c5ee531315686e37dea0c0300a",
     "blocks": [
       {
         "type": "paragraph",
-        "text": "生效日期：2026年11月16日",
-        "html": "生效日期：2026年11月16日"
+        "text": "生效日期：2026年11月17日",
+        "html": "生效日期：2026年11月17日"
       },
       {
         "type": "paragraph",
-        "text": "變更內容（上一版生效日期 2026年11月11日）：新增了獎勵廣告（Google AdMob）。只有在您用完免費試用後點選「觀看廣告並輸出」時，顯示廣告的 Google 才會收到裝置資訊；點選之前不會為廣告傳送任何內容。觀看廣告期間，會暫停收集使用統計。使用統計中附在截取失敗上的原因更詳細了（所處階段、錯誤的種類及其代碼）。設定中新增了「檢舉廣告」郵件。同時，我們改變了告知傳送內容變動的方式：先更新本政策，並在 App 的更新說明中寫明（第 1 至 9 條與第 12 條）。",
-        "html": "變更內容（上一版生效日期 2026年11月11日）：新增了獎勵廣告（Google AdMob）。只有在您用完免費試用後點選「觀看廣告並輸出」時，顯示廣告的 Google 才會收到裝置資訊；點選之前不會為廣告傳送任何內容。觀看廣告期間，會暫停收集使用統計。使用統計中附在截取失敗上的原因更詳細了（所處階段、錯誤的種類及其代碼）。設定中新增了「檢舉廣告」郵件。同時，我們改變了告知傳送內容變動的方式：先更新本政策，並在 App 的更新說明中寫明（第 1 至 9 條與第 12 條）。"
+        "text": "變更內容（上一版生效日期 2026年11月11日）：新增了獎勵廣告（Google AdMob）。只有在您用完免費試用後點選「觀看廣告並輸出」時，顯示廣告的 Google 才會收到裝置資訊；點選之前不會為廣告傳送任何內容。觀看廣告期間，會暫停收集使用統計。使用統計中附在截取失敗上的原因更詳細了（所處階段、錯誤的種類及其代碼）。設定中新增了「回報問題」郵件。同時，我們改變了告知傳送內容變動的方式：先更新本政策，並在 App 的更新說明中寫明（第 1 至 9 條與第 12 條）。",
+        "html": "變更內容（上一版生效日期 2026年11月11日）：新增了獎勵廣告（Google AdMob）。只有在您用完免費試用後點選「觀看廣告並輸出」時，顯示廣告的 Google 才會收到裝置資訊；點選之前不會為廣告傳送任何內容。觀看廣告期間，會暫停收集使用統計。使用統計中附在截取失敗上的原因更詳細了（所處階段、錯誤的種類及其代碼）。設定中新增了「回報問題」郵件。同時，我們改變了告知傳送內容變動的方式：先更新本政策，並在 App 的更新說明中寫明（第 1 至 9 條與第 12 條）。"
+      },
+      {
+        "type": "paragraph",
+        "text": "文字提取在裝置上進行。您主動提取的文字及其修改內容儲存在截圖旁的檔案中，不納入裝置備份。刪除截圖時一併刪除文字；修改遮擋、裁剪等圖片編輯後，會捨棄舊文字並重新提取。文字不會傳送到使用統計或廣告請求中。您選擇複製或分享的文字可能傳送到所選目的地。每張截圖的體驗使用紀錄儲存在裝置偏好設定中，觀看廣告取得的文字提取權限儲存在截圖旁。下述廣告說明也適用於您主動選擇的「觀看廣告後提取」，地區、追蹤授權和傳輸資訊條件相同。其獎勵為該截圖的文字提取權限，在辨識失敗或重新啟動App後仍可使用。",
+        "html": "文字提取在裝置上進行。您主動提取的文字及其修改內容儲存在截圖旁的檔案中，不納入裝置備份。刪除截圖時一併刪除文字；修改遮擋、裁剪等圖片編輯後，會捨棄舊文字並重新提取。文字不會傳送到使用統計或廣告請求中。您選擇複製或分享的文字可能傳送到所選目的地。每張截圖的體驗使用紀錄儲存在裝置偏好設定中，觀看廣告取得的文字提取權限儲存在截圖旁。下述廣告說明也適用於您主動選擇的「觀看廣告後提取」，地區、追蹤授權和傳輸資訊條件相同。其獎勵為該截圖的文字提取權限，在辨識失敗或重新啟動App後仍可使用。"
       },
       {
         "type": "paragraph",
@@ -4500,8 +4530,8 @@
       },
       {
         "type": "bullet",
-        "text": "在編輯器中點一下「儲存」離開時的編輯狀態。只會將遮擋框的類型、位置、是否遮擋，以及標註、裁剪與分割設定，儲存在項目旁的檔案中。辨識出的文字不會儲存。刪除項目時會一併刪除",
-        "html": "在編輯器中點一下「儲存」離開時的編輯狀態。只會將遮擋框的類型、位置、是否遮擋，以及標註、裁剪與分割設定，儲存在項目旁的檔案中。<strong>辨識出的文字不會儲存</strong>。刪除項目時會一併刪除"
+        "text": "在編輯器中點一下「儲存」離開時的編輯狀態。只會將遮擋框的類型、位置、是否遮擋，以及標註、裁剪與分割設定，儲存在項目旁的檔案中。用於自動遮擋而辨識的文字不會儲存。刪除項目時會一併刪除",
+        "html": "在編輯器中點一下「儲存」離開時的編輯狀態。只會將遮擋框的類型、位置、是否遮擋，以及標註、裁剪與分割設定，儲存在項目旁的檔案中。<strong>用於自動遮擋而辨識的文字不會儲存</strong>。刪除項目時會一併刪除"
       },
       {
         "type": "bullet",
@@ -5240,7 +5270,7 @@
       }
     ],
     "previous_source": "https://deep-vinca-12d.notion.site/3f7330fb1918816cacd7e6dbd45f4c81",
-    "updated_on": "2026-11-16"
+    "updated_on": "2026-11-17"
   },
   {
     "lang": "zh-Hant",

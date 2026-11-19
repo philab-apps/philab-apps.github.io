@@ -8,9 +8,9 @@ GitHub Pages에서 제공하는 정적 HTML과 CSS입니다. 배포 서비스의
 - `/`: 한국어 홈. 스튜디오 소개, 전체 앱 목록, 개발 방향, 문의.
 - `/en/`: 영어 홈.
 - `/tongcap/`: 통캡 영어 상세 페이지.
-- `/tongcap/ko/`, `/tongcap/ja/`, `/tongcap/es/`, `/tongcap/zh-Hans/`, `/tongcap/zh-Hant/`: 언어별 상세 페이지.
-- `/tongcap/privacy/`, `/tongcap/support/`: 영어 개인정보 처리방침과 지원 페이지. 다른 5개 언어는 각 상세 페이지 경로 아래 `privacy/`, `support/`를 사용합니다.
-- `content/tongcap/documents.json`: 2026-11-15에 공개 Notion에서 옮긴 12개 문서의 원문, 출처, 원문 해시.
+- `/tongcap/ko/`, `/tongcap/ja/`, `/tongcap/es/`, `/tongcap/de/`, `/tongcap/fr/`, `/tongcap/it/`, `/tongcap/zh-Hans/`, `/tongcap/zh-Hant/`: 언어별 상세 페이지.
+- `/tongcap/privacy/`, `/tongcap/support/`: 영어 개인정보 처리방침과 지원 페이지. 다른 8개 언어는 각 상세 페이지 경로 아래 `privacy/`, `support/`를 사용합니다.
+- `content/tongcap/documents.json`: 공개 Notion 문서 12개(2026-11-15)와 de·fr·it 처리방침·지원 6개의 원문, 출처, 원문 해시.
 - `content/tongcap/links.json`: 언어별 기존 Notion 주소와 새 GitHub Pages 주소.
 - `scripts/render_documents.py`: 원문을 공통 문서 디자인의 정적 HTML로 생성.
 - `site.css`: 공통 디자인, 모바일 배치, 시스템 다크 모드, 키보드 포커스와 동작 줄이기 대응.
@@ -57,7 +57,7 @@ python3 scripts/check.py <Tongcap 저장소 경로>
 python3 scripts/check.py <Tongcap 저장소 경로> --online
 ```
 
-기존 검사기는 앱 소스 저장소의 `docs/스토어-문구.md`, `PolicyPage.swift`, `docs/출시-신고값.md`를 기준으로 앱 이름·부제·정책 링크·앱 ID를 대조합니다. 소스 저장소가 없으면 이 명령은 실패합니다. 그 밖에 20개 페이지의 언어 연결, 로컬 링크, HTTP 응답, 외부 자원 부재, 문의 주소, AdMob 형식을 확인하고, 오류를 주입하는 8개 고정본으로 검사기 자체도 검증합니다. 문서의 제목·문단 순서·본문·링크·원문 해시도 대조합니다. 앱의 정책 URL은 `links.json`의 이전 전 또는 이전 후 주소와 일치해야 하고, 사이트의 정책·지원 링크는 새 주소로 연결되어야 합니다. 개인정보 처리방침에 원래 있던 Google Korea 연락처는 그대로 유지합니다.
+기존 검사기는 앱 소스 저장소의 `docs/스토어-문구.md`, `PolicyPage.swift`, `docs/출시-신고값.md`를 기준으로 앱 이름·부제·정책 링크·앱 ID를 대조합니다. 소스 저장소가 없으면 이 명령은 실패합니다. 그 밖에 29개 페이지의 언어 연결, 로컬 링크, HTTP 응답, 외부 자원 부재, 문의 주소, AdMob 형식을 확인하고, 오류를 주입하는 9개 고정본으로 검사기 자체도 검증합니다. 문서의 제목·문단 순서·본문·링크·원문 해시도 대조합니다. 앱의 정책 URL은 `links.json`의 이전 전 또는 이전 후 주소와 일치해야 하고, 사이트의 정책·지원 링크는 새 주소로 연결되어야 합니다. 개인정보 처리방침에 원래 있던 Google Korea 연락처는 그대로 유지합니다.
 
 스토어 이름·부제나 정책 주소를 변경할 때에는 앱 저장소를 기준으로 모든 언어 페이지와 홈 카드의 값을 함께 수정합니다. 기능이나 가격 정책을 변경하면 6개 언어의 기능·요금·FAQ 문구도 함께 확인합니다. 가격은 지역별로 다르므로 사이트에 금액을 고정하지 않습니다.
 

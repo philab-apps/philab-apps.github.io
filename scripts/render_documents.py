@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render Tongcap's help documents (privacy in nine languages, support in six) using only the standard library."""
+"""Render Tongcap's help documents (nine languages) using only the standard library."""
 import hashlib
 import html
 import json
@@ -9,8 +9,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://philab-apps.github.io'
 LANGUAGES = {'ko': '한국어', 'en': 'English', 'ja': '日本語', 'es': 'Español', 'de': 'Deutsch', 'fr': 'Français', 'it': 'Italiano', 'zh-Hans': '简体中文', 'zh-Hant': '繁體中文'}
-# 앱 소개·지원 쪽이 있는 언어. de·fr·it 는 처리방침만 있다(스토어 문구를 합친 뒤 소개·지원을 더한다).
-PRODUCT_LANGS = ('ko', 'en', 'ja', 'es', 'zh-Hans', 'zh-Hant')
 LABELS = {
     'ko': ('개인정보 처리방침', '지원', '이 페이지의 내용', '본문으로 바로가기', '맨 위로', '필랩'),
     'en': ('Privacy Policy', 'Support', 'On this page', 'Skip to content', 'Back to top', 'Philab'),
@@ -25,13 +23,7 @@ LABELS = {
 
 
 def product_path(lang):
-    if lang not in PRODUCT_LANGS:
-        lang = 'en'
     return '/tongcap/' + ('' if lang == 'en' else lang + '/')
-
-
-def doc_languages(kind):
-    return LANGUAGES if kind == 'privacy' else {c: n for c, n in LANGUAGES.items() if c in PRODUCT_LANGS}
 
 
 def document_path(lang, kind):
@@ -46,11 +38,10 @@ def render(doc):
     e = html.escape
     title = e(doc['title'])
     home = '/' if lang == 'ko' else '/en/'
-    languages = doc_languages(kind)
     description = doc['blocks'][1 if kind == 'privacy' else 0]['text']
-    alternate = '\n'.join(f'<link rel="alternate" hreflang="{code}" href="{SITE}{document_path(code, kind)}">' for code in languages)
-    language_links = '\n'.join(f'<li><a href="{document_path(code, kind)}" lang="{code}" hreflang="{code}"' + (' aria-current="page"' if code == lang else '') + f'>{label}</a></li>' for code, label in languages.items())
-    tabs = ''.join(f'<a href="{document_path(lang, value)}"' + (' aria-current="page"' if value == kind else '') + f'>{label}</a>' for value, label in [('privacy', policy)] + ([('support', support)] if lang in PRODUCT_LANGS else []))
+    alternate = '\n'.join(f'<link rel="alternate" hreflang="{code}" href="{SITE}{document_path(code, kind)}">' for code in LANGUAGES)
+    language_links = '\n'.join(f'<li><a href="{document_path(code, kind)}" lang="{code}" hreflang="{code}"' + (' aria-current="page"' if code == lang else '') + f'>{label}</a></li>' for code, label in LANGUAGES.items())
+    tabs = ''.join(f'<a href="{document_path(lang, value)}"' + (' aria-current="page"' if value == kind else '') + f'>{label}</a>' for value, label in [('privacy', policy), ('support', support)])
     toc = []
     body = []
     in_list = False
@@ -137,8 +128,8 @@ def render(doc):
 
 def main():
     documents = json.loads((ROOT / 'content/tongcap/documents.json').read_text())
-    expected = {(lang, kind) for kind in ('privacy', 'support') for lang in doc_languages(kind)}
-    assert len(documents) == 15 and {(d['lang'], d['kind']) for d in documents} == expected
+    expected = {(lang, kind) for lang in LANGUAGES for kind in ('privacy', 'support')}
+    assert len(documents) == 18 and {(d['lang'], d['kind']) for d in documents} == expected
     errors = []
     for doc in documents:
         # 원문 해시에는 시행일과 문단 순서가 포함된다. source는 앱 원문 또는 이전 Notion 문서다.
@@ -156,7 +147,7 @@ def main():
             target.write_text(rendered)
     if errors:
         sys.exit('\n'.join(errors))
-    print('15 documents: ' + ('up to date; original-text hashes verified' if '--check' in sys.argv else 'rendered'))
+    print('18 documents: ' + ('up to date; original-text hashes verified' if '--check' in sys.argv else 'rendered'))
 
 
 if __name__ == '__main__':

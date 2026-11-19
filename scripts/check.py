@@ -11,7 +11,7 @@
   메일   제품·홈은 문의 mailto 하나, 문서는 원문의 문의·관련 기관 메일 보존 · 개인 이름 0
   언어   <html lang> · hreflang 대체 링크가 서로 짝(자기 자신 포함·x-default) · 언어 고르기 링크가 그 언어 페이지로
   Tongcap  이름·부제 = docs/스토어-문구.md · 처리방침 링크 = links.json의 이전 후 URL(앱 소스는 이전 전·후 주소 허용) · 앱 ID = docs/출시-신고값.md
-시작할 때 자가점검: 사이트 사본을 일부러 깨뜨려(고정본 여덟) 규칙마다 실패가 나는지 본다.
+시작할 때 자가점검: 사이트 사본을 일부러 깨뜨려(고정본 아홉) 규칙마다 실패가 나는지 본다.
 """
 import html.parser
 import hashlib
@@ -29,14 +29,14 @@ from urllib.parse import unquote, urljoin, urlsplit
 
 SITE = 'https://philab-apps.github.io'
 MAIL = 'philab.help@gmail.com'
-LANGS = ['ko', 'en', 'es', 'ja', 'zh-Hans', 'zh-Hant']  # 앱 소개·지원이 있는 언어
-POLICY_LANGS = LANGS + ['de', 'fr', 'it']  # 처리방침은 아홉 언어 — de·fr·it 의 소개·지원은 스토어 문구를 합친 뒤
-STORE_LOC = {'ko': 'ko', 'en': 'en-US', 'es': 'es-ES', 'ja': 'ja', 'zh-Hans': 'zh-Hans', 'zh-Hant': 'zh-Hant'}
+LANGS = ['ko', 'en', 'es', 'de', 'fr', 'it', 'ja', 'zh-Hans', 'zh-Hant']
+STORE_LOC = {'ko': 'ko', 'en': 'en-US', 'es': 'es-ES', 'de': 'de-DE', 'fr': 'fr-FR', 'it': 'it', 'ja': 'ja', 'zh-Hans': 'zh-Hans', 'zh-Hant': 'zh-Hant'}
 POLICY_LABEL = {'ko': '개인정보 처리방침', 'en': 'Privacy Policy', 'es': 'Política de privacidad',
+                'de': 'Datenschutzerklärung', 'fr': 'Politique de confidentialité', 'it': 'Informativa sulla privacy',
                 'ja': 'プライバシーポリシー', 'zh-Hans': '隐私政策', 'zh-Hant': '隱私權政策'}
 SELF = 'scripts/check.py'
 ALLOWED_FILES = [r'README\.md', r'apps\.json', r'scripts/render_apps\.py', r'scripts/render_documents\.py',
-                 r'content/tongcap/(?:documents|links)\.json', r'\.nojekyll', r'\.gitignore', r'site\.css', r'app-ads\.txt', re.escape(SELF),
+                 r'content/tongcap/(?:documents|links)\.json', r'\.nojekyll', r'robots\.txt', r'sitemap\.xml', r'google[0-9a-f]+\.html', r'\.gitignore', r'site\.css', r'app-ads\.txt', re.escape(SELF),
                  r'(?:[A-Za-z0-9-]+/)*index\.html', r'[A-Za-z0-9-]+/(?:[A-Za-z0-9-]+/)*[A-Za-z0-9-]+\.(?:png|svg)']
 BANNED_TEXT = ['fonts.googleapis', 'fonts.gstatic', 'googletagmanager', 'google-analytics', 'gtag(', 'document.cookie']
 PERSONAL = re.compile(r'phil+ip|필립|\bchung\b', re.I)  # 개인 이름 — 상호 "필랩·Philab" 은 걸리지 않는다
@@ -115,7 +115,7 @@ def load_truth(tongcap):
     addresses = re.findall(r'case \.(\w+): "(https://philab-apps\.github\.io/tongcap/[^\"]+)"', swift)
     case_lang = {'zhHans': 'zh-Hans', 'zhHant': 'zh-Hant'}
     policy = {case_lang.get(c, c): address for c, address in addresses}
-    if set(policy) != set(POLICY_LANGS):
+    if set(policy) != set(LANGS):
         sys.exit(f'실패: PolicyPage.swift 에서 처리방침 주소 아홉을 못 읽음(읽은 것 {sorted(policy)})')
 
     md = read('docs/스토어-문구.md')
@@ -176,25 +176,22 @@ def check_static(root, truth):
     migration = {d['language']: d for d in migrations}
     document_by_url = {SITE + d['path']: d for d in documents}
     required_docs = {SITE + '/tongcap/' + ('' if lang == 'en' else lang + '/') + kind + '/'
-                     for kind, langs in (('privacy', POLICY_LANGS), ('support', LANGS)) for lang in langs}
-    if set(document_by_url) != required_docs or len(documents) != 15:
-        err.append('정책 원문은 9개 언어, 지원 원문은 6개 언어여야 한다')
+                     for lang in LANGS for kind in ('privacy', 'support')}
+    if set(document_by_url) != required_docs or len(documents) != 18:
+        err.append('지원·정책 원문은 9개 언어 × 2종류여야 한다')
     for d in documents:
         digest = hashlib.sha256('\n'.join(b['text'] for b in d['blocks']).encode()).hexdigest()
         if digest != d['source_text_sha256']:
             err.append(f'{d["path"]}: 원문 내용 해시 불일치')
-        if d['lang'] in migration:  # 새 언어(de·fr·it)는 옛 Notion 문서가 없어 이전 목록에 없다
-            entry = migration[d['lang']][d['kind']]
-            if entry['github_pages_url'] != SITE + d['path'] or entry['notion_url'] != d.get('previous_source', d['source']):
-                err.append(f'{d["path"]}: 이전 URL 목록과 원문 출처 불일치')
+        entry = migration[d['lang']][d['kind']]
+        # de·fr·it 는 옛 Notion 문서가 없어 notion_url 이 없다
+        if entry['github_pages_url'] != SITE + d['path'] or entry.get('notion_url', d['source']) != d.get('previous_source', d['source']):
+            err.append(f'{d["path"]}: 이전 URL 목록과 원문 출처 불일치')
         if SITE + d['path'] not in pages:
             err.append(f'{d["path"]}: 이전 문서 없음')
-    for lang in POLICY_LANGS:
-        if lang in migration:
-            if policy[lang] not in migration[lang]['privacy'].values():
-                err.append(f'{lang}: 앱의 처리방침 URL이 이전 전·후 주소에 없음')
-        elif policy[lang] != f'{SITE}/tongcap/{lang}/privacy/':
-            err.append(f'{lang}: 앱의 처리방침 URL이 사이트 주소와 다름')
+    for lang in LANGS:
+        if policy[lang] not in migration[lang]['privacy'].values():
+            err.append(f'{lang}: 앱의 처리방침 URL이 이전 전·후 주소에 없음')
 
     # 파일
     for f in files:
@@ -219,8 +216,16 @@ def check_static(root, truth):
             if m.group(0) != MAIL and not (original_policy and m.group(0) == 'googlekrsupport@google.com'):
                 err.append(f'{f}: 다른 메일 주소 {m.group(0)}')
     # 하한 — 0장 읽고 통과하지 않게
-    if len(pages) < 23:
-        err.append(f'페이지가 {len(pages)}장뿐(하한 23)')
+    if len(pages) < 29:
+        err.append(f'페이지가 {len(pages)}장뿐(하한 29)')
+    # sitemap.xml — 사이트 안 주소만, 실제 있는 쪽만(로컬 서버가 200 을 주는 쪽)
+    locs = re.findall(r'<loc>([^<]*)</loc>', texts.get('sitemap.xml', ''))
+    if not locs:
+        err.append('sitemap.xml 에 <loc> 이 없음')
+    for u in locs:
+        f = local(root, u)
+        if f is None or not os.path.isfile(f):
+            err.append(f'sitemap.xml: 사이트 안에 없는 주소 {u}')
 
     tongcap_langs, home_langs = set(), set()
     for url, (rel, doc) in pages.items():
@@ -228,8 +233,8 @@ def check_static(root, truth):
         nodes = list(doc.all())
         htm = next((n for n in nodes if n.tag == 'html'), None)
         lang = htm.attrs.get('lang') if htm else None
-        if lang not in POLICY_LANGS:
-            E(f'<html lang> 이 {lang!r} — {POLICY_LANGS} 중 하나여야')
+        if lang not in LANGS:
+            E(f'<html lang> 이 {lang!r} — {LANGS} 중 하나여야')
             continue
         # 밖
         for n in nodes:
@@ -322,7 +327,7 @@ def check_static(root, truth):
             actual_links = [n.attrs['href'] for parent in source_nodes for n in parent.all() if n.tag == 'a']
             if actual_links != source_links:
                 E('원문 본문 링크 불일치')
-            expected_alts = {h: SITE + '/tongcap/' + ('' if h == 'en' else h + '/') + source['kind'] + '/' for h in (POLICY_LANGS if source['kind'] == 'privacy' else LANGS)}
+            expected_alts = {h: SITE + '/tongcap/' + ('' if h == 'en' else h + '/') + source['kind'] + '/' for h in LANGS}
             if {h: u for h, u in alt_of.items() if h != 'x-default'} != expected_alts:
                 E('문서의 언어 메뉴는 같은 종류의 문서로 연결해야 한다')
         elif url in {SITE + '/tongcap/' + ('' if code == 'en' else code + '/') for code in LANGS}:
@@ -411,6 +416,7 @@ FIXTURES = [  # (파일, 바꿀 글, 새 글, 나와야 할 오류 낱말)
     ('tongcap/es/index.html', 'href="../ja/" lang="ja"', 'href="../zh-Hans/" lang="ja"', '언어 링크 ja'),
     ('tongcap/zh-Hant/index.html', '<p class="sub">網頁與聊天記錄完整存成一張長圖</p>', '<p class="sub">網頁與聊天記錄完整存成一張圖</p>', '부제(.sub)'),
     ('app-ads.txt', 'DIRECT', 'RESELLER', 'app-ads.txt'),
+    ('sitemap.xml', '/tongcap/it/privacy/', '/tongcap/it/nowhere/', 'sitemap.xml'),
     ('docs/메모.md', None, '# 내부 메모', '사이트 파일 아님'),
     ('tongcap/ko/privacy/index.html', '시행일: 2026년 11월 18일', '시행일: 2026년 11월 17일', '원문 내용 불일치'),
     ('tongcap/support/index.html', 'Tap &quot;Restore Purchases&quot; in Settings.', 'Tap Settings.', '원문 내용 불일치'),

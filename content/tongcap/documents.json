@@ -876,6 +876,67 @@
     ]
   },
   {
+    "lang": "de",
+    "kind": "support",
+    "title": "Tongcap Support",
+    "source": "Tongcap en 지원 문서(2026-11-15)를 번역",
+    "captured_on": "2026-11-20",
+    "path": "/tongcap/de/support/",
+    "source_text_sha256": "3e54b6dde048be9d472e9502ba35ec2527c9bb3e72da611f932586af6c3eb244",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Tongcap ist eine iPhone-App, die lange Bildschirme zu einem einzigen Bild macht. Erfassen und Bearbeiten laufen auf deinem Gerät, und die Bilder, die du erfasst, werden nie an den Entwickler gesendet.",
+        "html": "Tongcap ist eine iPhone-App, die lange Bildschirme zu einem einzigen Bild macht. Erfassen und Bearbeiten laufen auf deinem Gerät, und die Bilder, die du erfasst, werden nie an den Entwickler gesendet."
+      },
+      {
+        "type": "heading",
+        "text": "Kontakt",
+        "html": "Kontakt"
+      },
+      {
+        "type": "paragraph",
+        "text": "philab.help@gmail.com",
+        "html": "<a href=\"mailto:philab.help@gmail.com\">philab.help@gmail.com</a>"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nenne uns bitte dein Gerätemodell, deine iOS-Version und was auf welchem Bildschirm passiert ist, damit wir schnell nachsehen können.",
+        "html": "Nenne uns bitte dein Gerätemodell, deine iOS-Version und was auf welchem Bildschirm passiert ist, damit wir schnell nachsehen können."
+      },
+      {
+        "type": "heading",
+        "text": "Häufige Fragen",
+        "html": "Häufige Fragen"
+      },
+      {
+        "type": "paragraph",
+        "text": "Mein Pro-Kauf wird nicht angezeigt.\nTippe in den Einstellungen auf „Käufe wiederherstellen“.",
+        "html": "<strong>Mein Pro-Kauf wird nicht angezeigt.</strong><br>Tippe in den Einstellungen auf „Käufe wiederherstellen“."
+      },
+      {
+        "type": "paragraph",
+        "text": "Wie erfasse ich einen langen Bildschirm aus einer anderen App?\nNimm den Bildschirm mit „Bildschirmaufnahme“ im Kontrollzentrum auf, während du scrollst, und wähle das Video dann in Tongcap aus.",
+        "html": "<strong>Wie erfasse ich einen langen Bildschirm aus einer anderen App?</strong><br>Nimm den Bildschirm mit „Bildschirmaufnahme“ im Kontrollzentrum auf, während du scrollst, und wähle das Video dann in Tongcap aus."
+      },
+      {
+        "type": "paragraph",
+        "text": "Wohin gelangen meine erfassten Bilder?\nSie bleiben auf deinem Gerät und gehen nur dorthin, wohin du sie beim Tippen auf „Exportieren“ schickst.",
+        "html": "<strong>Wohin gelangen meine erfassten Bilder?</strong><br>Sie bleiben auf deinem Gerät und gehen nur dorthin, wohin du sie beim Tippen auf „Exportieren“ schickst."
+      },
+      {
+        "type": "heading",
+        "text": "Datenschutzerklärung",
+        "html": "Datenschutzerklärung"
+      },
+      {
+        "type": "paragraph",
+        "text": "Tongcap Datenschutzerklärung",
+        "html": "<a href=\"/tongcap/de/privacy/\">Tongcap Datenschutzerklärung</a>"
+      }
+    ]
+  },
+  {
     "lang": "en",
     "kind": "privacy",
     "title": "Tongcap Privacy Policy",
@@ -3635,6 +3696,67 @@
     ]
   },
   {
+    "lang": "fr",
+    "kind": "support",
+    "title": "Assistance Tongcap",
+    "source": "Tongcap en 지원 문서(2026-11-15)를 번역",
+    "captured_on": "2026-11-20",
+    "path": "/tongcap/fr/support/",
+    "source_text_sha256": "dd75c0008b3f60d7f36fb556d6fcce6675fc7782fc1be6cdb4e60dd041c5a889",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Tongcap est une app pour iPhone qui transforme les écrans longs en une seule image. La capture et la modification se font sur votre appareil, et les images que vous capturez ne sont jamais envoyées au développeur.",
+        "html": "Tongcap est une app pour iPhone qui transforme les écrans longs en une seule image. La capture et la modification se font sur votre appareil, et les images que vous capturez ne sont jamais envoyées au développeur."
+      },
+      {
+        "type": "heading",
+        "text": "Contact",
+        "html": "Contact"
+      },
+      {
+        "type": "paragraph",
+        "text": "philab.help@gmail.com",
+        "html": "<a href=\"mailto:philab.help@gmail.com\">philab.help@gmail.com</a>"
+      },
+      {
+        "type": "paragraph",
+        "text": "Indiquez-nous le modèle de votre appareil, votre version d'iOS et ce qui s'est passé sur quel écran, afin que nous puissions examiner le problème rapidement.",
+        "html": "Indiquez-nous le modèle de votre appareil, votre version d'iOS et ce qui s'est passé sur quel écran, afin que nous puissions examiner le problème rapidement."
+      },
+      {
+        "type": "heading",
+        "text": "Questions fréquentes",
+        "html": "Questions fréquentes"
+      },
+      {
+        "type": "paragraph",
+        "text": "Mon achat Pro n'apparaît pas.\nTouchez « Restaurer les achats » dans Réglages.",
+        "html": "<strong>Mon achat Pro n'apparaît pas.</strong><br>Touchez « Restaurer les achats » dans Réglages."
+      },
+      {
+        "type": "paragraph",
+        "text": "Comment capturer un écran long depuis une autre app ?\nEnregistrez l'écran avec « Enregistrement de l’écran » dans le Centre de contrôle pendant que vous faites défiler, puis choisissez cette vidéo dans Tongcap.",
+        "html": "<strong>Comment capturer un écran long depuis une autre app ?</strong><br>Enregistrez l'écran avec « Enregistrement de l’écran » dans le Centre de contrôle pendant que vous faites défiler, puis choisissez cette vidéo dans Tongcap."
+      },
+      {
+        "type": "paragraph",
+        "text": "Où vont mes images capturées ?\nElles restent sur votre appareil et ne vont que là où vous les envoyez quand vous touchez Exporter.",
+        "html": "<strong>Où vont mes images capturées ?</strong><br>Elles restent sur votre appareil et ne vont que là où vous les envoyez quand vous touchez Exporter."
+      },
+      {
+        "type": "heading",
+        "text": "Politique de confidentialité",
+        "html": "Politique de confidentialité"
+      },
+      {
+        "type": "paragraph",
+        "text": "Politique de confidentialité de Tongcap",
+        "html": "<a href=\"/tongcap/fr/privacy/\">Politique de confidentialité de Tongcap</a>"
+      }
+    ]
+  },
+  {
     "lang": "it",
     "kind": "privacy",
     "title": "Informativa sulla privacy di Tongcap",
@@ -4507,6 +4629,67 @@
         "type": "paragraph",
         "text": "Se questa informativa cambia, aggiorniamo prima l'informativa al suo indirizzo web pubblico, poi includiamo la modifica nel successivo aggiornamento dell'app. Le modifiche e la nuova data di entrata in vigore sono indicate all'inizio dell'informativa e le modifiche si applicano da quella data. Se ciò che inviamo fuori dal tuo dispositivo (statistiche di utilizzo e annunci) cambia, compresi cosa viene inviato, perché, chi lo riceve, per quanto tempo viene conservato o come rifiutarlo, o se iniziamo a inviare di più, aggiorniamo prima questa informativa e poi lo comunichiamo anche nelle note di quell'aggiornamento dell'app. Per le funzioni che devi toccare per usare, come gli annunci, non viene inviato nulla per quella funzione prima del tocco.",
         "html": "Se questa informativa cambia, aggiorniamo prima l&#x27;informativa al suo indirizzo web pubblico, poi includiamo la modifica nel successivo aggiornamento dell&#x27;app. Le modifiche e la nuova data di entrata in vigore sono indicate all&#x27;inizio dell&#x27;informativa e le modifiche si applicano da quella data. Se ciò che inviamo fuori dal tuo dispositivo (statistiche di utilizzo e annunci) cambia, compresi cosa viene inviato, perché, chi lo riceve, per quanto tempo viene conservato o come rifiutarlo, o se iniziamo a inviare di più, aggiorniamo prima questa informativa e poi lo comunichiamo anche nelle note di quell&#x27;aggiornamento dell&#x27;app. Per le funzioni che devi toccare per usare, come gli annunci, non viene inviato nulla per quella funzione prima del tocco."
+      }
+    ]
+  },
+  {
+    "lang": "it",
+    "kind": "support",
+    "title": "Assistenza Tongcap",
+    "source": "Tongcap en 지원 문서(2026-11-15)를 번역",
+    "captured_on": "2026-11-20",
+    "path": "/tongcap/it/support/",
+    "source_text_sha256": "a69a3a848826356a3c584945590d955cba68277f3fb8d97d5ee0ff59cd741a66",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Tongcap è un'app per iPhone che trasforma le schermate lunghe in un'unica immagine. La cattura e la modifica avvengono sul tuo dispositivo e le immagini che catturi non vengono mai inviate allo sviluppatore.",
+        "html": "Tongcap è un'app per iPhone che trasforma le schermate lunghe in un'unica immagine. La cattura e la modifica avvengono sul tuo dispositivo e le immagini che catturi non vengono mai inviate allo sviluppatore."
+      },
+      {
+        "type": "heading",
+        "text": "Contatti",
+        "html": "Contatti"
+      },
+      {
+        "type": "paragraph",
+        "text": "philab.help@gmail.com",
+        "html": "<a href=\"mailto:philab.help@gmail.com\">philab.help@gmail.com</a>"
+      },
+      {
+        "type": "paragraph",
+        "text": "Indicaci il modello del tuo dispositivo, la versione di iOS e cosa è successo in quale schermata, così possiamo verificare più in fretta.",
+        "html": "Indicaci il modello del tuo dispositivo, la versione di iOS e cosa è successo in quale schermata, così possiamo verificare più in fretta."
+      },
+      {
+        "type": "heading",
+        "text": "Domande frequenti",
+        "html": "Domande frequenti"
+      },
+      {
+        "type": "paragraph",
+        "text": "Non vedo il mio acquisto di Pro.\nTocca “Ripristina acquisti” in Impostazioni.",
+        "html": "<strong>Non vedo il mio acquisto di Pro.</strong><br>Tocca “Ripristina acquisti” in Impostazioni."
+      },
+      {
+        "type": "paragraph",
+        "text": "Come catturo una schermata lunga da un'altra app?\nRegistra lo schermo con “Registrazione schermo” nel Centro di Controllo mentre scorri, poi scegli quel video in Tongcap.",
+        "html": "<strong>Come catturo una schermata lunga da un'altra app?</strong><br>Registra lo schermo con “Registrazione schermo” nel Centro di Controllo mentre scorri, poi scegli quel video in Tongcap."
+      },
+      {
+        "type": "paragraph",
+        "text": "Dove vanno le immagini che catturo?\nRestano sul tuo dispositivo e vanno solo dove scegli quando tocchi Esporta.",
+        "html": "<strong>Dove vanno le immagini che catturo?</strong><br>Restano sul tuo dispositivo e vanno solo dove scegli quando tocchi Esporta."
+      },
+      {
+        "type": "heading",
+        "text": "Informativa sulla privacy",
+        "html": "Informativa sulla privacy"
+      },
+      {
+        "type": "paragraph",
+        "text": "Informativa sulla privacy di Tongcap",
+        "html": "<a href=\"/tongcap/it/privacy/\">Informativa sulla privacy di Tongcap</a>"
       }
     ]
   },

@@ -70,5 +70,35 @@
       "notion_url": "https://deep-vinca-12d.notion.site/d67e48dda33345d8bd6f64ee2c2dc0ce",
       "github_pages_url": "https://philab-apps.github.io/tongcap/zh-Hant/support/"
     }
+  },
+  {
+    "language": "de",
+    "app_store_locale": "de-DE",
+    "privacy": {
+      "github_pages_url": "https://philab-apps.github.io/tongcap/de/privacy/"
+    },
+    "support": {
+      "github_pages_url": "https://philab-apps.github.io/tongcap/de/support/"
+    }
+  },
+  {
+    "language": "fr",
+    "app_store_locale": "fr-FR",
+    "privacy": {
+      "github_pages_url": "https://philab-apps.github.io/tongcap/fr/privacy/"
+    },
+    "support": {
+      "github_pages_url": "https://philab-apps.github.io/tongcap/fr/support/"
+    }
+  },
+  {
+    "language": "it",
+    "app_store_locale": "it",
+    "privacy": {
+      "github_pages_url": "https://philab-apps.github.io/tongcap/it/privacy/"
+    },
+    "support": {
+      "github_pages_url": "https://philab-apps.github.io/tongcap/it/support/"
+    }
   }
 ]

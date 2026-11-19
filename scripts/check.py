@@ -10,8 +10,9 @@
   밖     <script> 0 · 바깥 <link>·그림 0 · 외부 글꼴·분석(googleapis·googletagmanager 등) 0
   메일   제품·홈은 문의 mailto 하나, 문서는 원문의 문의·관련 기관 메일 보존 · 개인 이름 0
   언어   <html lang> · hreflang 대체 링크가 서로 짝(자기 자신 포함·x-default) · 언어 고르기 링크가 그 언어 페이지로
+  원문   처리방침 아홉 블록 = 앱 원문 App/Resources/<언어>.lproj/PrivacyPolicy.md(다르면 render_documents.py --from-md 안내)
   Tongcap  이름·부제 = docs/스토어-문구.md · 처리방침 링크 = links.json의 이전 후 URL(앱 소스는 이전 전·후 주소 허용) · 앱 ID = docs/출시-신고값.md
-시작할 때 자가점검: 사이트 사본을 일부러 깨뜨려(고정본 아홉) 규칙마다 실패가 나는지 본다.
+시작할 때 자가점검: 사이트 사본을 일부러 깨뜨려(고정본 아홉 + 앱 원문 한 줄 다른 것) 규칙마다 실패가 나는지 본다.
 """
 import html.parser
 import hashlib
@@ -26,6 +27,9 @@ import urllib.request
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import unquote, urljoin, urlsplit
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from render_documents import md_blocks  # noqa: E402
 
 SITE = 'https://philab-apps.github.io'
 MAIL = 'philab.help@gmail.com'
@@ -131,7 +135,8 @@ def load_truth(tongcap):
     m = re.search(r'\|\s*앱 Apple ID\s*\|\s*`(\d+)`', read('docs/출시-신고값.md'))
     if not m:
         sys.exit('실패: 출시-신고값.md 에서 앱 Apple ID 를 못 읽음')
-    return policy, store, m.group(1)
+    md = {lang: md_blocks(read(f'App/Resources/{lang}.lproj/PrivacyPolicy.md')) for lang in LANGS}
+    return policy, store, m.group(1), md
 
 
 # ---------- 사이트 읽기 ----------
@@ -167,7 +172,7 @@ def load_pages(root):
 # ---------- 규칙 ----------
 def check_static(root, truth):
     """서버·바깥 요청 없이 보는 규칙 전부. (오류 목록, 바깥 링크, 사이트 안 주소) 를 돌려준다."""
-    policy, store, app_id = truth
+    policy, store, app_id, md = truth
     err, external, internal = [], set(), set()
     files = site_files(root)
     pages = load_pages(root)
@@ -183,6 +188,8 @@ def check_static(root, truth):
         digest = hashlib.sha256('\n'.join(b['text'] for b in d['blocks']).encode()).hexdigest()
         if digest != d['source_text_sha256']:
             err.append(f'{d["path"]}: 원문 내용 해시 불일치')
+        if d['kind'] == 'privacy' and d['blocks'] != md[d['lang']]:
+            err.append(f'{d["path"]}: 앱 원문 PrivacyPolicy.md 와 공개본이 다름 — python3 scripts/render_documents.py --from-md <Tongcap 저장소> 로 다시 만든다')
         entry = migration[d['lang']][d['kind']]
         # de·fr·it 는 옛 Notion 문서가 없어 notion_url 이 없다
         if entry['github_pages_url'] != SITE + d['path'] or entry.get('notion_url', d['source']) != d.get('previous_source', d['source']):
@@ -448,6 +455,13 @@ def self_test(root, truth):
             errs = check_static(d, truth)[0]
             if not any(want in e for e in errs):
                 bad.append(f'자가점검 고정본 {i}({f}): "{want}" 오류가 안 나옴 — 규칙이 깨졌다 {errs[:3]}')
+        # 앱 원문만 한 줄 다르게(공개본은 그대로) — 잡혀야 한다
+        md = dict(truth[3])
+        md['ko'] = [dict(b) for b in md['ko']]
+        md['ko'][3]['text'] += ' x'
+        md['ko'][3]['html'] += ' x'
+        if not any('앱 원문' in e for e in check_static(base, truth[:3] + (md,))[0]):
+            bad.append('자가점검 원문 고정본: 앱 원문이 달라도 오류가 안 나옴 — 규칙이 깨졌다')
         return bad
     finally:
         shutil.rmtree(tmp)

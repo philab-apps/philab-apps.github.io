@@ -3,6 +3,7 @@
 import hashlib
 import html
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -126,8 +127,39 @@ def render(doc):
 '''
 
 
+EMAIL = re.compile(r'[\w.+-]+@[\w-]+(?:\.[\w-]+)+')
+
+
+def md_blocks(md):
+    """앱 원문 PrivacyPolicy.md → 블록. `# 제목` 과 빈 줄은 뺀다. **x** → strong, 이메일 → mailto, 나머지는 escape."""
+    blocks = []
+    for line in md.split('\n'):
+        if not line.strip() or line.startswith('# '):
+            continue
+        typ = 'paragraph'
+        if line.startswith('## '):
+            typ, line = 'heading', line[3:]
+        elif line.startswith('- '):
+            typ, line = 'bullet', line[2:]
+        h = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html.escape(line))
+        h = EMAIL.sub(lambda m: f'<a href="mailto:{m[0]}">{m[0]}</a>', h)
+        blocks.append({'type': typ, 'text': re.sub(r'\*\*(.+?)\*\*', r'\1', line), 'html': h})
+    return blocks
+
+
+def policy_blocks(tongcap, lang):
+    return md_blocks((Path(tongcap).expanduser() / f'App/Resources/{lang}.lproj/PrivacyPolicy.md').read_text(encoding='utf-8'))
+
+
 def main():
-    documents = json.loads((ROOT / 'content/tongcap/documents.json').read_text())
+    path = ROOT / 'content/tongcap/documents.json'
+    documents = json.loads(path.read_text())
+    if '--from-md' in sys.argv:  # --from-md <Tongcap 저장소>: 처리방침 아홉 블록과 해시를 원문에서 다시 만든다
+        for d in documents:
+            if d['kind'] == 'privacy':
+                d['blocks'] = policy_blocks(sys.argv[sys.argv.index('--from-md') + 1], d['lang'])
+                d['source_text_sha256'] = hashlib.sha256('\n'.join(b['text'] for b in d['blocks']).encode()).hexdigest()
+        path.write_text(json.dumps(documents, ensure_ascii=False, indent=2) + '\n')
     expected = {(lang, kind) for lang in LANGUAGES for kind in ('privacy', 'support')}
     assert len(documents) == 18 and {(d['lang'], d['kind']) for d in documents} == expected
     errors = []

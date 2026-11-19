@@ -87,6 +87,12 @@ python3 scripts/render_documents.py
 python3 scripts/render_documents.py --check
 ```
 
+처리방침은 Tongcap 앱 원문(`App/Resources/<언어>.lproj/PrivacyPolicy.md`)에서 만듭니다. 원문을 고친 뒤 아래 한 줄이 아홉 언어 블록과 `source_text_sha256` 을 다시 만들고 HTML까지 생성합니다(`documents.json` 을 손으로 고치지 않습니다). 이어서 `python3 scripts/check.py <Tongcap 저장소>` 가 원문과 공개본이 같은지 확인하며, 다르면 실패합니다.
+
+```bash
+python3 scripts/render_documents.py --from-md /Users/philip/Desktop/Apps/TallShot
+```
+
 ## 다음 앱 배포 시 URL 교체
 
 웹사이트는 새 주소에 연결되어 있습니다. **이번 이전에서 App Store Connect와 앱 소스는 변경하지 않았습니다.** 다음 앱 배포를 준비할 때 아래 주소로 교체합니다. 기존 주소는 `content/tongcap/links.json`에 함께 기록되어 있습니다.

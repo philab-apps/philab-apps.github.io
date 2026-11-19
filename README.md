@@ -90,7 +90,7 @@ python3 scripts/render_documents.py --check
 처리방침은 Tongcap 앱 원문(`App/Resources/<언어>.lproj/PrivacyPolicy.md`)에서 만듭니다. 원문을 고친 뒤 아래 한 줄이 아홉 언어 블록과 `source_text_sha256` 을 다시 만들고 HTML까지 생성합니다(`documents.json` 을 손으로 고치지 않습니다). 이어서 `python3 scripts/check.py <Tongcap 저장소>` 가 원문과 공개본이 같은지 확인하며, 다르면 실패합니다.
 
 ```bash
-python3 scripts/render_documents.py --from-md /Users/philip/Desktop/Apps/TallShot
+python3 scripts/render_documents.py --from-md <Tongcap 저장소 경로>
 ```
 
 ## 다음 앱 배포 시 URL 교체

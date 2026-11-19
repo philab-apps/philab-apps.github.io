@@ -29,7 +29,8 @@ from urllib.parse import unquote, urljoin, urlsplit
 
 SITE = 'https://philab-apps.github.io'
 MAIL = 'philab.help@gmail.com'
-LANGS = ['ko', 'en', 'es', 'ja', 'zh-Hans', 'zh-Hant']
+LANGS = ['ko', 'en', 'es', 'ja', 'zh-Hans', 'zh-Hant']  # 앱 소개·지원이 있는 언어
+POLICY_LANGS = LANGS + ['de', 'fr', 'it']  # 처리방침은 아홉 언어 — de·fr·it 의 소개·지원은 스토어 문구를 합친 뒤
 STORE_LOC = {'ko': 'ko', 'en': 'en-US', 'es': 'es-ES', 'ja': 'ja', 'zh-Hans': 'zh-Hans', 'zh-Hant': 'zh-Hant'}
 POLICY_LABEL = {'ko': '개인정보 처리방침', 'en': 'Privacy Policy', 'es': 'Política de privacidad',
                 'ja': 'プライバシーポリシー', 'zh-Hans': '隐私政策', 'zh-Hant': '隱私權政策'}
@@ -114,8 +115,8 @@ def load_truth(tongcap):
     addresses = re.findall(r'case \.(\w+): "(https://philab-apps\.github\.io/tongcap/[^\"]+)"', swift)
     case_lang = {'zhHans': 'zh-Hans', 'zhHant': 'zh-Hant'}
     policy = {case_lang.get(c, c): address for c, address in addresses}
-    if set(policy) != set(LANGS):
-        sys.exit(f'실패: PolicyPage.swift 에서 처리방침 주소 여섯을 못 읽음(읽은 것 {sorted(policy)})')
+    if set(policy) != set(POLICY_LANGS):
+        sys.exit(f'실패: PolicyPage.swift 에서 처리방침 주소 아홉을 못 읽음(읽은 것 {sorted(policy)})')
 
     md = read('docs/스토어-문구.md')
     store = {}
@@ -175,21 +176,25 @@ def check_static(root, truth):
     migration = {d['language']: d for d in migrations}
     document_by_url = {SITE + d['path']: d for d in documents}
     required_docs = {SITE + '/tongcap/' + ('' if lang == 'en' else lang + '/') + kind + '/'
-                     for lang in LANGS for kind in ('privacy', 'support')}
-    if set(document_by_url) != required_docs or len(documents) != 12:
-        err.append('지원·정책 원문은 6개 언어 × 2종류여야 한다')
+                     for kind, langs in (('privacy', POLICY_LANGS), ('support', LANGS)) for lang in langs}
+    if set(document_by_url) != required_docs or len(documents) != 15:
+        err.append('정책 원문은 9개 언어, 지원 원문은 6개 언어여야 한다')
     for d in documents:
         digest = hashlib.sha256('\n'.join(b['text'] for b in d['blocks']).encode()).hexdigest()
         if digest != d['source_text_sha256']:
             err.append(f'{d["path"]}: 원문 내용 해시 불일치')
-        entry = migration[d['lang']][d['kind']]
-        if entry['github_pages_url'] != SITE + d['path'] or entry['notion_url'] != d.get('previous_source', d['source']):
-            err.append(f'{d["path"]}: 이전 URL 목록과 원문 출처 불일치')
+        if d['lang'] in migration:  # 새 언어(de·fr·it)는 옛 Notion 문서가 없어 이전 목록에 없다
+            entry = migration[d['lang']][d['kind']]
+            if entry['github_pages_url'] != SITE + d['path'] or entry['notion_url'] != d.get('previous_source', d['source']):
+                err.append(f'{d["path"]}: 이전 URL 목록과 원문 출처 불일치')
         if SITE + d['path'] not in pages:
             err.append(f'{d["path"]}: 이전 문서 없음')
-    for lang in LANGS:
-        if policy[lang] not in migration[lang]['privacy'].values():
-            err.append(f'{lang}: 앱의 처리방침 URL이 이전 전·후 주소에 없음')
+    for lang in POLICY_LANGS:
+        if lang in migration:
+            if policy[lang] not in migration[lang]['privacy'].values():
+                err.append(f'{lang}: 앱의 처리방침 URL이 이전 전·후 주소에 없음')
+        elif policy[lang] != f'{SITE}/tongcap/{lang}/privacy/':
+            err.append(f'{lang}: 앱의 처리방침 URL이 사이트 주소와 다름')
 
     # 파일
     for f in files:
@@ -214,8 +219,8 @@ def check_static(root, truth):
             if m.group(0) != MAIL and not (original_policy and m.group(0) == 'googlekrsupport@google.com'):
                 err.append(f'{f}: 다른 메일 주소 {m.group(0)}')
     # 하한 — 0장 읽고 통과하지 않게
-    if len(pages) < 20:
-        err.append(f'페이지가 {len(pages)}장뿐(하한 20)')
+    if len(pages) < 23:
+        err.append(f'페이지가 {len(pages)}장뿐(하한 23)')
 
     tongcap_langs, home_langs = set(), set()
     for url, (rel, doc) in pages.items():
@@ -223,8 +228,8 @@ def check_static(root, truth):
         nodes = list(doc.all())
         htm = next((n for n in nodes if n.tag == 'html'), None)
         lang = htm.attrs.get('lang') if htm else None
-        if lang not in LANGS:
-            E(f'<html lang> 이 {lang!r} — {LANGS} 중 하나여야')
+        if lang not in POLICY_LANGS:
+            E(f'<html lang> 이 {lang!r} — {POLICY_LANGS} 중 하나여야')
             continue
         # 밖
         for n in nodes:
@@ -317,7 +322,7 @@ def check_static(root, truth):
             actual_links = [n.attrs['href'] for parent in source_nodes for n in parent.all() if n.tag == 'a']
             if actual_links != source_links:
                 E('원문 본문 링크 불일치')
-            expected_alts = {h: SITE + '/tongcap/' + ('' if h == 'en' else h + '/') + source['kind'] + '/' for h in LANGS}
+            expected_alts = {h: SITE + '/tongcap/' + ('' if h == 'en' else h + '/') + source['kind'] + '/' for h in (POLICY_LANGS if source['kind'] == 'privacy' else LANGS)}
             if {h: u for h, u in alt_of.items() if h != 'x-default'} != expected_alts:
                 E('문서의 언어 메뉴는 같은 종류의 문서로 연결해야 한다')
         elif url in {SITE + '/tongcap/' + ('' if code == 'en' else code + '/') for code in LANGS}:
